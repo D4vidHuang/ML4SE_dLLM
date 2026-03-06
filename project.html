@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Information – ML4SE | TU Delft</title>
+    <meta name="description"
+        content="Project information for ML4SE: using diffusion-based language models for code identifier renaming at TU Delft." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <div class="nav-logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <polygon points="16,2 30,28 2,28" fill="#00A6D6" />
+                        <polygon points="16,10 24,28 8,28" fill="#0C2340" />
+                    </svg>
+                </div>
+                <div class="nav-brand-text">
+                    <span class="nav-title">ML4SE</span>
+                    <span class="nav-subtitle">TU Delft</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+                <li><a href="project.html" class="nav-link active" id="nav-project">Project</a></li>
+                <li><a href="research.html" class="nav-link" id="nav-research">Research</a></li>
+                <li><a href="requirements.html" class="nav-link" id="nav-requirements">Requirements</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero page-hero-project">
+        <div class="page-hero-bg">
+            <div class="hero-glow hero-glow-1"></div>
+        </div>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Project</span>
+            </div>
+            <div class="page-hero-content">
+                <div class="page-hero-tag">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                    </svg>
+                    Project Information
+                </div>
+                <h1>Diffusion LLMs for<br /><span class="accent">Code Identifier Renaming</span></h1>
+                <p>Explore how discrete diffusion language models can be applied to the software engineering task of
+                    variable and method identifier renaming — improving code readability and maintainability
+                    automatically.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="section">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="overview-main">
+                    <div class="content-block">
+                        <h2>Project Overview</h2>
+                        <p>
+                            This project investigates the application of <strong>Discrete Diffusion Language Models
+                                (dLLMs)</strong> to the task of <strong>code identifier renaming</strong> in Java source
+                            code. Poor identifier naming is one of the most widespread forms of technical debt, leading
+                            to code that is difficult to understand, maintain, and extend.
+                        </p>
+                        <p>
+                            Traditional approaches rely on autoregressive models (e.g., CodeBERT, CodeT5) or rule-based
+                            heuristics. This project asks: <em>can a non-autoregressive, diffusion-based approach
+                                achieve competitive or superior results?</em>
+                        </p>
+                    </div>
+
+                    <div class="content-block">
+                        <h2>Research Question</h2>
+                        <div class="rq-box">
+                            <div class="rq-label">RQ</div>
+                            <blockquote>
+                                "To what extent can discrete diffusion language models rename poor code identifiers in
+                                Java source code, compared to autoregressive and fill-in-the-middle baselines?"
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <h2>Methodology</h2>
+                        <div class="method-steps">
+                            <div class="method-step" id="step-1">
+                                <div class="method-step-header">
+                                    <div class="method-icon">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                        </svg>
+                                    </div>
+                                    <h3>1. Bad Naming Detection</h3>
+                                </div>
+                                <p>Use a multi-probe detector (overconfidence + context sensitivity) to identify poor
+                                    identifier names in Java code. Indicators include single-letter names, dictionary
+                                    mismatches, and low contextual coherence.</p>
+                            </div>
+                            <div class="method-step" id="step-2">
+                                <div class="method-step-header">
+                                    <div class="method-icon">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                                            <path d="M3 9h18M9 21V9" />
+                                        </svg>
+                                    </div>
+                                    <h3>2. Contextual Masking</h3>
+                                </div>
+                                <p>Extract code context around the identified bad-name token. Mask the target identifier
+                                    to enable the model to infer a better replacement using surrounding code semantics.
+                                </p>
+                            </div>
+                            <div class="method-step" id="step-3">
+                                <div class="method-step-header">
+                                    <div class="method-icon">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="M12 8v4l3 3" />
+                                        </svg>
+                                    </div>
+                                    <h3>3. Diffusion Inference</h3>
+                                </div>
+                                <p>Apply the dLLM (e.g., MDLM, MDLM-GPT, or similar) to iteratively refine the masked
+                                    token via a forward-backward diffusion process, producing a renaming suggestion.</p>
+                            </div>
+                            <div class="method-step" id="step-4">
+                                <div class="method-step-header">
+                                    <div class="method-icon">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                                        </svg>
+                                    </div>
+                                    <h3>4. Evaluation</h3>
+                                </div>
+                                <p>Evaluate using Exact Match (EM), BLEU, and LLM-as-judge metrics against ground-truth
+                                    renamings from real developer commits. Compare against FIM-based and autoregressive
+                                    baselines.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <h2>Datasets</h2>
+                        <div class="dataset-cards">
+                            <div class="dataset-card" id="dataset-diffusion">
+                                <div class="dataset-badge dataset-badge-cyan">Primary</div>
+                                <h4>Diffusion Benchmark</h4>
+                                <p>A curated dataset of Java variable renaming instances extracted from real-world
+                                    developer commits. Used as the main evaluation corpus for diffusion-based models.
+                                </p>
+                                <div class="dataset-meta">
+                                    <span class="meta-tag">Java</span>
+                                    <span class="meta-tag">Variable Renaming</span>
+                                    <span class="meta-tag">Ground-truth Labels</span>
+                                </div>
+                            </div>
+                            <div class="dataset-card" id="dataset-fim">
+                                <div class="dataset-badge dataset-badge-blue">Baseline</div>
+                                <h4>FIM / AR Benchmark</h4>
+                                <p>A fill-in-the-middle style benchmark used to evaluate autoregressive and FIM-based
+                                    baseline models. Enables controlled comparison with the diffusion approach.</p>
+                                <div class="dataset-meta">
+                                    <span class="meta-tag">Java</span>
+                                    <span class="meta-tag">FIM Format</span>
+                                    <span class="meta-tag">Multi-model</span>
+                                </div>
+                            </div>
+                            <div class="dataset-card" id="dataset-developer">
+                                <div class="dataset-badge dataset-badge-green">Extended</div>
+                                <h4>Developer Dataset</h4>
+                                <p>An extended dataset focusing on real developer refactoring sessions for code variable
+                                    name improvements. Provides additional evaluation diversity.</p>
+                                <div class="dataset-meta">
+                                    <span class="meta-tag">Refactoring</span>
+                                    <span class="meta-tag">Developer Commits</span>
+                                    <span class="meta-tag">Extended Scope</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="overview-sidebar">
+                    <div class="sidebar-card" id="sidebar-quickfacts">
+                        <h4>Quick Facts</h4>
+                        <ul class="sidebar-list">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                <span>Language: <strong>Java</strong></span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                <span>Model type: <strong>Discrete dLLM</strong></span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                <span>Task: <strong>Identifier Renaming</strong></span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                <span>Metric: <strong>Exact Match + BLEU</strong></span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                <span>Domain: <strong>SE + NLP</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card" id="sidebar-models">
+                        <h4>Models Studied</h4>
+                        <div class="model-list">
+                            <div class="model-item model-item-cyan">
+                                <span class="model-name">MDLM</span>
+                                <span class="model-type">Diffusion</span>
+                            </div>
+                            <div class="model-item model-item-cyan">
+                                <span class="model-name">MDLM-GPT</span>
+                                <span class="model-type">Diffusion</span>
+                            </div>
+                            <div class="model-item model-item-blue">
+                                <span class="model-name">CodeT5+</span>
+                                <span class="model-type">FIM Baseline</span>
+                            </div>
+                            <div class="model-item model-item-blue">
+                                <span class="model-name">DeepSeek-Coder</span>
+                                <span class="model-type">AR Baseline</span>
+                            </div>
+                            <div class="model-item model-item-blue">
+                                <span class="model-name">StarCoder2</span>
+                                <span class="model-type">AR Baseline</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card sidebar-tip" id="sidebar-tip">
+                        <div class="tip-icon">💡</div>
+                        <h4>Pro Tip</h4>
+                        <p>Start by reading the MDLM paper and the RefineID paper to understand both the model
+                            architecture and the evaluation methodology before starting implementation.</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deliverables Timeline -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Project Deliverables</h2>
+                <p>Key milestones and what you're expected to produce</p>
+            </div>
+            <div class="timeline" id="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h3>Literature Review Summary</h3>
+                        <p>A concise, structured summary of at least 10 relevant papers. Cover dLLMs, code generation,
+                            identifier naming, and SE benchmarks.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Week 1–2</span>
+                            <span class="tag">Written Report</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h3>Reproduction & Baseline</h3>
+                        <p>Reproduce results from one baseline method (e.g., FIM-based model on the benchmark dataset).
+                            Document setup, findings, and any deviations.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Week 3–4</span>
+                            <span class="tag">Code + Log</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h3>Core Implementation</h3>
+                        <p>Implement and run the diffusion-based approach. This includes bad naming detection, masking,
+                            diffusion inference, and result logging.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Week 5–7</span>
+                            <span class="tag">Code + Experiments</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h3>Evaluation & Analysis</h3>
+                        <p>Evaluate your model against baselines using EM, BLEU, and LLM-as-judge. Analyze failure cases
+                            and generate visualizations.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Week 8–9</span>
+                            <span class="tag">Results + Plots</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">5</div>
+                    <div class="timeline-content">
+                        <h3>Final Report</h3>
+                        <p>Write a full research report in IEEE or ACM format. Include introduction, related work,
+                            methodology, results, discussion, and conclusion.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Week 10</span>
+                            <span class="tag">PDF Report</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                            <polygon points="16,2 30,28 2,28" fill="#00A6D6" />
+                            <polygon points="16,10 24,28 8,28" fill="#0C2340" />
+                        </svg>
+                        <span>ML4SE</span>
+                    </div>
+                    <p>Machine Learning for Software Engineering<br />TU Delft · EEMCS Faculty</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Course Pages</h4>
+                    <ul>
+                        <li><a href="project.html">Project Information</a></li>
+                        <li><a href="research.html">Existing Research</a></li>
+                        <li><a href="requirements.html">Student Requirements</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>External Links</h4>
+                    <ul>
+                        <li><a href="https://www.tudelft.nl" target="_blank" rel="noopener">TU Delft</a></li>
+                        <li><a href="https://brightspace.tudelft.nl" target="_blank" rel="noopener">Brightspace</a></li>
+                        <li><a href="https://arxiv.org" target="_blank" rel="noopener">arXiv</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025–2026 ML4SE · TU Delft · Software Engineering Research Group</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Existing Research – ML4SE | TU Delft</title>
+    <meta name="description"
+        content="A curated overview of existing research in machine learning for software engineering, covering diffusion LLMs, code intelligence, and identifier naming." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <div class="nav-logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <polygon points="16,2 30,28 2,28" fill="#00A6D6" />
+                        <polygon points="16,10 24,28 8,28" fill="#0C2340" />
+                    </svg>
+                </div>
+                <div class="nav-brand-text">
+                    <span class="nav-title">ML4SE</span>
+                    <span class="nav-subtitle">TU Delft</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+                <li><a href="project.html" class="nav-link" id="nav-project">Project</a></li>
+                <li><a href="research.html" class="nav-link active" id="nav-research">Research</a></li>
+                <li><a href="requirements.html" class="nav-link" id="nav-requirements">Requirements</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero page-hero-research">
+        <div class="page-hero-bg">
+            <div class="hero-glow hero-glow-1"></div>
+        </div>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Research</span>
+            </div>
+            <div class="page-hero-content">
+                <div class="page-hero-tag">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                    Existing Research
+                </div>
+                <h1>State of the Art in<br /><span class="accent">ML for Software Engineering</span></h1>
+                <p>A curated collection of seminal and recent papers that underpin this project. Organized by research
+                    theme to help you build a coherent understanding of the field.</p>
+            </div>
+            <!-- Filter Controls -->
+            <div class="filter-bar" id="filter-bar">
+                <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+                <button class="filter-btn" data-filter="diffusion" id="filter-diffusion">Diffusion LLMs</button>
+                <button class="filter-btn" data-filter="code-intel" id="filter-code">Code Intelligence</button>
+                <button class="filter-btn" data-filter="naming" id="filter-naming">Identifier Naming</button>
+                <button class="filter-btn" data-filter="evaluation" id="filter-evaluation">Evaluation</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Papers -->
+    <section class="section">
+        <div class="container">
+
+            <!-- Category: Diffusion LLMs -->
+            <div class="research-category" id="cat-diffusion">
+                <div class="category-header">
+                    <div class="category-icon category-icon-cyan">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 8v4l3 3" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h2>Diffusion Language Models</h2>
+                        <p>Foundational and recent work on discrete diffusion models for text generation.</p>
+                    </div>
+                </div>
+                <div class="paper-grid">
+                    <div class="paper-card" data-category="diffusion" id="paper-mdlm">
+                        <div class="paper-meta">
+                            <span class="paper-year">2024</span>
+                            <span class="paper-venue venue-neurips">NeurIPS</span>
+                        </div>
+                        <h3 class="paper-title">Simplified and Generalized Masked Diffusion for Discrete Data (MDLM)
+                        </h3>
+                        <p class="paper-authors">Sahoo, S., Arriola, M., Schiff, Y., Gokaslan, A., Marroquin, E., Chiu,
+                            J.T., Rush, A., Kuleshov, V.</p>
+                        <p class="paper-abstract">Introduces MDLM, a masked discrete diffusion model demonstrating
+                            strong performance on language generation benchmarks. Key reference for the modeling
+                            approach used in this project.</p>
+                        <div class="paper-tags">
+                            <span class="paper-tag">Discrete Diffusion</span>
+                            <span class="paper-tag">Language Modeling</span>
+                            <span class="paper-tag">Core Reference</span>
+                        </div>
+                        <a href="https://arxiv.org/abs/2406.04329" target="_blank" rel="noopener" class="paper-link"
+                            id="link-mdlm">
+                            View on arXiv
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="paper-card" data-category="diffusion" id="paper-d3pm">
+                        <div class="paper-meta">
+                            <span class="paper-year">2021</span>
+                            <span class="paper-venue venue-neurips">NeurIPS</span>
+                        </div>
+                        <h3 class="paper-title">Structured Denoising Diffusion Models in Discrete State-Spaces (D3PM)
+                        </h3>
+                        <p class="paper-authors">Austin, J., Johnson, D.D., Ho, J., Tarlow, D., van den Berg, R.</p>
+                        <p class="paper-abstract">Introduces D3PM, a family of diffusion models for discrete data
+                            including text, laying the groundwork for modern discrete diffusion approaches. Essential
+                            for understanding MDLM's foundations.</p>
+                        <div class="paper-tags">
+                            <span class="paper-tag">Discrete Diffusion</span>
+                            <span class="paper-tag">Foundational</span>
+                        </div>
+                        <a href="https://arxiv.org/abs/2107.03006" target="_blank" rel="noopener" class="paper-link"
+                            id="link-d3pm">
+                            View on arXiv
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="paper-card" data-category="diffusion" id="paper-mdlmgpt">
+                        <div class="paper-meta">
+                            <span class="paper-year">2024</span>
+                            <span class="paper-venue venue-icml">ICML</span>
+                        </div>
+                        <h3 class="paper-title">Masked Diffusion Language Models are Fast and Scalable Learners</h3>
+                        <p class="paper-authors">Ye, T., Zheng, H., Chen, W., Ma, Z., Wang, O., Gu, Q.</p>
+                        <p class="paper-abstract">Presents an efficient and scalable masked diffusion architecture.
+                            Demonstrates that diffusion LMs can compete with autoregressive models on perplexity while
+                            being much faster at inference.</p>
+                        <div class="paper-tags">
+                            <span class="paper-tag">Masked Diffusion</span>
+                            <span class="paper-tag">Scalability</span>
+                            <span class="paper-tag">Efficiency</span>
+                        </div>
+                        <a href="https://arxiv.org/abs/2406.07524" target="_blank" rel="noopener" class="paper-link"
+                            id="link-mdlmgpt">
+                            View on arXiv
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="paper-card" data-category="diffusion" id="paper-diffuseq">
+                        <div class="paper-meta">
+                            <span class="paper-year">2023</span>
+                            <span class="paper-venue venue-iclr">ICLR</span>
+                        </div>
+                        <h3 class="paper-title">DiffuSeq: Sequence to Sequence Text Generation with Diffusion Models
+                        </h3>
+                        <p class="paper-authors">Gong, S., Li, M., Feng, J., Wu, Z., Kong, L.</p>
+                        <p class="paper-abstract">Applies continuous diffusion models to conditional text generation
+                            tasks like machine translation and summarization. Relevant as a comparison point for the
+                            sequence-to-name generation framing.</p>
+                        <div class="paper-tags">
+                            <span class="paper-tag">Seq2Seq</span>
+                            <span class="paper-tag">Conditional Generation</span>
+                        </div>
+                        <a href="https://arxiv.org/abs/2210.08933" target="_blank" rel="noopener" class="paper-link"
+                            id="link-diffuseq">
+                            View on arXiv
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Code Intelligence -->
+            <div class="research-category" id="cat-code">
+                <div class="category-header">
+                    <div class="category-icon category-icon-blue">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h2>Code Intelligence</h2>
+                        <p>Pre-trained models and LLMs specifically designed for source code understanding and
+                            generation.</p>
+                    </div>
+                </div>
+                <div class="paper-grid">
+                    <div class="paper-card" data-category="code-intel" id="paper-codebert">
+                        <div class="paper-meta">
+                            <span class="paper-year">2020</span>
+                            <span class="paper-venue venue-emnlp">EMNLP</span>
+                        </div>
+                        <h3 class="paper-title">CodeBERT: A Pre-Trained Model for Programming and Natural Languages</h3>
+                        <p class="paper-authors">Feng, Z., Guo, D., Tang, D., et al.</p>
+                        <p class="paper-abstract">Introduces CodeBERT, a bimodal transformer pre-trained on code and
+                            natural language pairs. A foundational baseline for code-related NLP tasks and understanding
+                            of identifier semantics.</p>
+                        <div class="paper-tags">
+                            <span class="paper-tag">Pre-trained Model</span>
+                            <span class="paper-tag">Code Understanding</span>
+                        </div>
+                        <a href="https://arxiv.org/abs/2002.08155" target="_blank" rel="noopener" class="paper-link"
+                            id="link-codebert">
+                            View on arXiv
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="paper-card" data-category="code-intel" id="paper-codet5">
+                        <div class="paper-meta">
+                            <span class="paper-year">2021</span>
+                            <span class="paper-venue venue-emnlp">EMNLP</span>
+                        </div>
+                        <h3 class="paper-title">CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models for
+                            Code</h3>
+                        <p class="paper-authors">Wang, Y., Wang, W., Joty, S., Hoi, S.C.H.</p>
+                        <p class="paper-abstract">CodeT5 uses identifier-aware pre-training objectives, making it
+                            directly relevant to the identifier renaming task. Used as a key baseline in this project's
+                            evaluation.</p>
+                        <div class="paper-tags">
+                            <span class="paper-tag">Encoder-Decoder</span>
+                            <span class="paper-tag">Identifier-aware</span>
+                            <span class="paper-tag">Key Baseline</span>
+                        </div>
+                        <a href="https://arxiv.org/abs/2109.00859" target="_blank" rel="noopener" class="paper-link"
+                            id="link-codet5">
+                            View on arXiv
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="paper-card" data-category="code-intel" id="paper-starcoder">
+                        <div class="paper-meta">
+                            <span class="paper-year">2023</span>
+                            <span class="paper-venue venue-arxiv">arXiv</span>
+                        </div>
+                        <h3 class="paper-title">StarCoder: May the Source Be With You!</h3>
+                        <p class="paper-authors">Li, R., Allal, L.B., Zi, Y., et al.</p>
+                        <p class="paper-abstract">StarCoder is a large FIM-capable code LLM trained on The Stack
+                            dataset. Relevant as a direct FIM-baseline for code completion and identifier prediction
+                            tasks.</p>
+                        <div class="paper-tags">
+                            <span class="paper-tag">FIM</span>
+                            <span class="paper-tag">Large LLM</span>
+                            <span class="paper-tag">Baseline</span>
+                        </div>
+                        <a href="https://arxiv.org/abs/2305.06161" target="_blank" rel="noopener" class="paper-link"
+                            id="link-starcoder">
+                            View on arXiv
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="paper-card" data-category="code-intel" id="paper-deepseek">
+                        <div class="paper-meta">
+                            <span class="paper-year">2024</span>
+                            <span class="paper-venue venue-arxiv">arXiv</span>
+                        </div>
+                        <h3 class="paper-title">DeepSeek-Coder: When the Large Language Model Meets Programming</h3>
+                        <p class="paper-authors">Guo, D., Zhu, Q., Yang, D., et al.</p>
+                        <p class="paper-abstract">DeepSeek-Coder is a state-of-the-art code-focused LLM supporting FIM.
+                            Used as a strong baseline in this project for fill-in-the-middle identifier generation.</p>
+                        <div class="paper-tags">
+                            <span class="paper-tag">FIM</span>
+                            <span class="paper-tag">SOTA Baseline</span>
+                        </div>
+                        <a href="https://arxiv.org/abs/2401.14196" target="_blank" rel="noopener" class="paper-link"
+                            id="link-deepseek">
+                            View on arXiv
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Identifier Naming -->
+            <div class="research-category" id="cat-naming">
+                <div class="category-header">
+                    <div class="category-icon category-icon-green">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 20h9" />
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h2>Identifier Naming in SE</h2>
+                        <p>Research specifically on naming quality, identifier renaming, and related refactoring.</p>
+                    </div>
+                </div>
+                <div class="paper-grid">
+                    <div class="paper-card" data-category="naming" id="paper-refineid">
+                        <div class="paper-meta">
+                            <span class="paper-year">2024</span>
+                            <span class="paper-venue venue-icse">ICSE</span>
+                        </div>
+                        <h3 class="paper-title">RefineID: Refining Code Identifier Names in the Wild</h3>
+                        <p class="paper-authors">[Authors TBD – internal reference]</p>
+                        <p class="paper-abstract">Directly benchmarks identifier renaming using real-world developer
+                            commits. Provides the primary dataset and evaluation framework used in this project.
+                            Essential reading.</p>
+                        <div class="paper-tags">
+                            <span class="paper-tag">Identifier Renaming</span>
+                            <span class="paper-tag">Benchmark</span>
+                            <span class="paper-tag">Core Reference</span>
+                        </div>
+                        <a href="research.html#paper-refineid" class="paper-link paper-link-internal"
+                            id="link-refineid">
+                            Used in this project
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="paper-card" data-category="naming" id="paper-nameeval">
+                        <div class="paper-meta">
+                            <span class="paper-year">2022</span>
+                            <span class="paper-venue venue-tse">TSE</span>
+                        </div>
+                        <h3 class="paper-title">A Survey on Code Naming Smells: Definition and Detection</h3>
+                        <p class="paper-authors">Peruma, A., Mkaouer, M.W., et al.</p>
+                        <p class="paper-abstract">Systematically defines naming smells in software (linguistic patterns
+                            that signal poor naming) and surveys automatic detection approaches. Motivates the need for
+                            the automatic renaming task.</p>
+                        <div class="paper-tags">
+                            <span class="paper-tag">Naming Smells</span>
+                            <span class="paper-tag">Survey</span>
+                        </div>
+                        <a href="https://dl.acm.org/doi/10.1145/3501299" target="_blank" rel="noopener"
+                            class="paper-link" id="link-nameeval">
+                            View Paper
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="paper-card" data-category="naming" id="paper-bagger">
+                        <div class="paper-meta">
+                            <span class="paper-year">2023</span>
+                            <span class="paper-venue venue-fse">FSE</span>
+                        </div>
+                        <h3 class="paper-title">BAGGER: Leveraging Variable Name Context for Code Variable Name
+                            Suggestions</h3>
+                        <p class="paper-authors">Liu, S., et al.</p>
+                        <p class="paper-abstract">Presents a context-aware approach to suggesting better variable names
+                            using surrounding code tokens. Directly related to the contextual masking strategy in our
+                            project implementation.</p>
+                        <div class="paper-tags">
+                            <span class="paper-tag">Variable Naming</span>
+                            <span class="paper-tag">Context-aware</span>
+                        </div>
+                        <a href="https://dl.acm.org/doi/10.1145/3611643.3613867" target="_blank" rel="noopener"
+                            class="paper-link" id="link-bagger">
+                            View Paper
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="paper-card" data-category="naming" id="paper-codename">
+                        <div class="paper-meta">
+                            <span class="paper-year">2021</span>
+                            <span class="paper-venue venue-ase">ASE</span>
+                        </div>
+                        <h3 class="paper-title">Learning to Suggest Better Variable Names from Code Diffs</h3>
+                        <p class="paper-authors">Alon, U., Sadaka, R., Levy, O., Yahav, E.</p>
+                        <p class="paper-abstract">Uses a graph neural network approach to learn from code diffs how
+                            developers rename variables. A classic baseline for the identifier renaming task using
+                            graph-structured code representations.</p>
+                        <div class="paper-tags">
+                            <span class="paper-tag">GNN</span>
+                            <span class="paper-tag">Code Diffs</span>
+                            <span class="paper-tag">Renaming</span>
+                        </div>
+                        <a href="https://arxiv.org/abs/2104.09686" target="_blank" rel="noopener" class="paper-link"
+                            id="link-codename">
+                            View on arXiv
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Evaluation -->
+            <div class="research-category" id="cat-eval">
+                <div class="category-header">
+                    <div class="category-icon category-icon-orange">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h2>Evaluation Methods</h2>
+                        <p>Metrics and frameworks for evaluating code generation and LLM performance.</p>
+                    </div>
+                </div>
+                <div class="paper-grid">
+                    <div class="paper-card" data-category="evaluation" id="paper-llmjudge">
+                        <div class="paper-meta">
+                            <span class="paper-year">2023</span>
+                            <span class="paper-venue venue-neurips">NeurIPS</span>
+                        </div>
+                        <h3 class="paper-title">Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena</h3>
+                        <p class="paper-authors">Zheng, L., Chiang, W.L., Sheng, Y., et al.</p>
+                        <p class="paper-abstract">Proposes the LLM-as-judge evaluation paradigm, using strong LLMs to
+                            assess model outputs. We adopt this approach as a supplementary metric alongside EM for
+                            renaming quality evaluation.</p>
+                        <div class="paper-tags">
+                            <span class="paper-tag">LLM Judge</span>
+                            <span class="paper-tag">Evaluation</span>
+                            <span class="paper-tag">MT-Bench</span>
+                        </div>
+                        <a href="https://arxiv.org/abs/2306.05685" target="_blank" rel="noopener" class="paper-link"
+                            id="link-llmjudge">
+                            View on arXiv
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="paper-card" data-category="evaluation" id="paper-bleu">
+                        <div class="paper-meta">
+                            <span class="paper-year">2002</span>
+                            <span class="paper-venue venue-acl">ACL</span>
+                        </div>
+                        <h3 class="paper-title">BLEU: a Method for Automatic Evaluation of Machine Translation</h3>
+                        <p class="paper-authors">Papineni, K., Roukos, S., Ward, T., Zhu, W.</p>
+                        <p class="paper-abstract">The classic BLEU metric for evaluating generated text quality against
+                            references. Used alongside EM to provide a more nuanced evaluation of identifier renaming
+                            predictions.</p>
+                        <div class="paper-tags">
+                            <span class="paper-tag">BLEU</span>
+                            <span class="paper-tag">Metric</span>
+                            <span class="paper-tag">Classic</span>
+                        </div>
+                        <a href="https://aclanthology.org/P02-1040/" target="_blank" rel="noopener" class="paper-link"
+                            id="link-bleu">
+                            View Paper
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="paper-card" data-category="evaluation" id="paper-humanevalpack">
+                        <div class="paper-meta">
+                            <span class="paper-year">2023</span>
+                            <span class="paper-venue venue-arxiv">arXiv</span>
+                        </div>
+                        <h3 class="paper-title">OctoPack: Instruction Tuning Code Large Language Models</h3>
+                        <p class="paper-authors">Muennighoff, N., Liu, Q., Zebaze, A., et al.</p>
+                        <p class="paper-abstract">Introduces HumanEvalPack, a multilingual extension of HumanEval for
+                            evaluating code generation across languages. Useful context for understanding code LLM
+                            evaluation methodology.</p>
+                        <div class="paper-tags">
+                            <span class="paper-tag">Benchmarking</span>
+                            <span class="paper-tag">Code Eval</span>
+                        </div>
+                        <a href="https://arxiv.org/abs/2308.07124" target="_blank" rel="noopener" class="paper-link"
+                            id="link-octopack">
+                            View on arXiv
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Reading Guide -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recommended Reading Order</h2>
+                <p>A structured path through the literature for students new to the field</p>
+            </div>
+            <div class="reading-path">
+                <div class="reading-step" id="read-1">
+                    <div class="reading-num">Week 1</div>
+                    <h4>Foundations</h4>
+                    <ul>
+                        <li>D3PM (discrete diffusion basics)</li>
+                        <li>CodeBERT (code pre-training)</li>
+                        <li>BLEU metric paper</li>
+                    </ul>
+                </div>
+                <div class="reading-connector">→</div>
+                <div class="reading-step" id="read-2">
+                    <div class="reading-num">Week 2</div>
+                    <h4>Modern Methods</h4>
+                    <ul>
+                        <li>MDLM (core model)</li>
+                        <li>StarCoder / DeepSeek</li>
+                        <li>CodeT5 (baseline model)</li>
+                    </ul>
+                </div>
+                <div class="reading-connector">→</div>
+                <div class="reading-step" id="read-3">
+                    <div class="reading-num">Week 3</div>
+                    <h4>Naming Research</h4>
+                    <ul>
+                        <li>RefineID benchmark</li>
+                        <li>Naming smells survey</li>
+                        <li>BAGGER paper</li>
+                    </ul>
+                </div>
+                <div class="reading-connector">→</div>
+                <div class="reading-step" id="read-4">
+                    <div class="reading-num">Week 4</div>
+                    <h4>Evaluation</h4>
+                    <ul>
+                        <li>LLM-as-judge paper</li>
+                        <li>HumanEvalPack</li>
+                        <li>Your project proposal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                            <polygon points="16,2 30,28 2,28" fill="#00A6D6" />
+                            <polygon points="16,10 24,28 8,28" fill="#0C2340" />
+                        </svg>
+                        <span>ML4SE</span>
+                    </div>
+                    <p>Machine Learning for Software Engineering<br />TU Delft · EEMCS Faculty</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Course Pages</h4>
+                    <ul>
+                        <li><a href="project.html">Project Information</a></li>
+                        <li><a href="research.html">Existing Research</a></li>
+                        <li><a href="requirements.html">Student Requirements</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>External Links</h4>
+                    <ul>
+                        <li><a href="https://www.tudelft.nl" target="_blank" rel="noopener">TU Delft</a></li>
+                        <li><a href="https://brightspace.tudelft.nl" target="_blank" rel="noopener">Brightspace</a></li>
+                        <li><a href="https://arxiv.org" target="_blank" rel="noopener">arXiv</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025–2026 ML4SE · TU Delft · Software Engineering Research Group</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

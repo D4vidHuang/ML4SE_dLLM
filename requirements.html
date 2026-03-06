@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Requirements – ML4SE | TU Delft</title>
+    <meta name="description"
+        content="Student requirements, expectations, deliverables, and evaluation criteria for the ML4SE course at TU Delft." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <div class="nav-logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <polygon points="16,2 30,28 2,28" fill="#00A6D6" />
+                        <polygon points="16,10 24,28 8,28" fill="#0C2340" />
+                    </svg>
+                </div>
+                <div class="nav-brand-text">
+                    <span class="nav-title">ML4SE</span>
+                    <span class="nav-subtitle">TU Delft</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+                <li><a href="project.html" class="nav-link" id="nav-project">Project</a></li>
+                <li><a href="research.html" class="nav-link" id="nav-research">Research</a></li>
+                <li><a href="requirements.html" class="nav-link active" id="nav-requirements">Requirements</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero page-hero-requirements">
+        <div class="page-hero-bg">
+            <div class="hero-glow hero-glow-1"></div>
+        </div>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Requirements</span>
+            </div>
+            <div class="page-hero-content">
+                <div class="page-hero-tag">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 11 12 14 22 4" />
+                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                    </svg>
+                    Student Requirements
+                </div>
+                <h1>What I Expect<br /><span class="accent">From You</span></h1>
+                <p>A clear and transparent overview of expectations, deliverables, grading, and conduct policies for
+                    students enrolled in ML4SE.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements Content -->
+    <section class="section">
+        <div class="container">
+            <div class="req-layout">
+
+                <!-- Left: Main Requirements -->
+                <div class="req-main">
+
+                    <!-- General Expectations -->
+                    <div class="req-block" id="req-general">
+                        <div class="req-block-header">
+                            <div class="req-icon req-icon-cyan">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="8" r="4" />
+                                    <path d="M20 21a8 8 0 1 0-16 0" />
+                                </svg>
+                            </div>
+                            <h2>General Expectations</h2>
+                        </div>
+                        <p>This is a research-oriented course. You are expected to behave and think like a junior
+                            researcher — not just a student completing assignments. This means engaging critically with
+                            the literature, making informed decisions about your implementation choices, and expressing
+                            your own opinions about the methods.</p>
+                        <div class="checklist" id="checklist-general">
+                            <div class="check-item">
+                                <div class="check-icon">✓</div>
+                                <div class="check-content">
+                                    <strong>Active Engagement</strong>
+                                    <p>Attend all scheduled meetings and seminars. Come prepared with questions and
+                                        updates on your progress.</p>
+                                </div>
+                            </div>
+                            <div class="check-item">
+                                <div class="check-icon">✓</div>
+                                <div class="check-content">
+                                    <strong>Independent Problem Solving</strong>
+                                    <p>Attempt to troubleshoot technical issues yourself first, using documentation and
+                                        prior research. Reach out to the TA with specific, well-articulated questions.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="check-item">
+                                <div class="check-icon">✓</div>
+                                <div class="check-content">
+                                    <strong>Proactive Communication</strong>
+                                    <p>If you are falling behind or encounter a blocker, communicate early. Do not wait
+                                        until the deadline to flag problems.</p>
+                                </div>
+                            </div>
+                            <div class="check-item">
+                                <div class="check-icon">✓</div>
+                                <div class="check-content">
+                                    <strong>Collaborative Spirit</strong>
+                                    <p>While you work individually, you are encouraged to discuss ideas with peers.
+                                        Respect intellectual boundaries — do not share or copy code or analysis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Requirements -->
+                    <div class="req-block" id="req-technical">
+                        <div class="req-block-header">
+                            <div class="req-icon req-icon-blue">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6" />
+                                    <polyline points="8 6 2 12 8 18" />
+                                </svg>
+                            </div>
+                            <h2>Technical Requirements</h2>
+                        </div>
+                        <p>Your implementation must meet the following technical standards. These ensure reproducibility
+                            and scientific rigor.</p>
+
+                        <div class="req-section-title">Code Quality</div>
+                        <div class="checklist">
+                            <div class="check-item">
+                                <div class="check-icon check-icon-blue">✓</div>
+                                <div class="check-content">
+                                    <strong>Version Control</strong>
+                                    <p>All code must be maintained in a <strong>private Git repository</strong> (GitHub
+                                        or GitLab). Share access with the TA at the start of the project.</p>
+                                </div>
+                            </div>
+                            <div class="check-item">
+                                <div class="check-icon check-icon-blue">✓</div>
+                                <div class="check-content">
+                                    <strong>Reproducibility</strong>
+                                    <p>Your experiments must be fully reproducible. Provide a README with setup
+                                        instructions, dependency lists, and commands to reproduce results.</p>
+                                </div>
+                            </div>
+                            <div class="check-item">
+                                <div class="check-icon check-icon-blue">✓</div>
+                                <div class="check-content">
+                                    <strong>Code Clarity</strong>
+                                    <p>Write clean, well-commented code. Avoid unnecessarily complex implementations —
+                                        clear is better than clever. Use meaningful variable names (practicing what you
+                                        study!).</p>
+                                </div>
+                            </div>
+                            <div class="check-item">
+                                <div class="check-icon check-icon-blue">✓</div>
+                                <div class="check-content">
+                                    <strong>Environment Management</strong>
+                                    <p>Use a virtual environment (conda or venv). Include an
+                                        <code>environment.yml</code> or <code>requirements.txt</code> file in the
+                                        repository root.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="req-section-title">Experiment Standards</div>
+                        <div class="checklist">
+                            <div class="check-item">
+                                <div class="check-icon check-icon-blue">✓</div>
+                                <div class="check-content">
+                                    <strong>Baseline Comparison</strong>
+                                    <p>Always compare against at least one established baseline. Your results only have
+                                        meaning in context.</p>
+                                </div>
+                            </div>
+                            <div class="check-item">
+                                <div class="check-icon check-icon-blue">✓</div>
+                                <div class="check-content">
+                                    <strong>Statistical Reporting</strong>
+                                    <p>Report metrics with appropriate precision (2–3 decimal places). Where applicable,
+                                        include confidence intervals or standard deviations over multiple runs.</p>
+                                </div>
+                            </div>
+                            <div class="check-item">
+                                <div class="check-icon check-icon-blue">✓</div>
+                                <div class="check-content">
+                                    <strong>Error Logging</strong>
+                                    <p>Document failed experiments and what you learned from them. Negative results are
+                                        scientifically valuable; ignoring them is not.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="code-example" id="code-example">
+                            <div class="code-example-header">
+                                <span class="dot red"></span><span class="dot yellow"></span><span
+                                    class="dot green"></span>
+                                <span>Expected repository structure</span>
+                            </div>
+                            <pre><span class="kw">ml4se-project/</span>
+├── <span class="str">README.md</span>          <span class="comment"># Setup & reproduction guide</span>
+├── <span class="str">requirements.txt</span>   <span class="comment"># or environment.yml</span>
+├── <span class="str">data/</span>              <span class="comment"># Datasets (or download scripts)</span>
+├── <span class="str">src/</span>
+│   ├── <span class="str">detector/</span>      <span class="comment"># Naming smell detection</span>
+│   ├── <span class="str">model/</span>         <span class="comment"># Diffusion model interface</span>
+│   └── <span class="str">evaluate/</span>      <span class="comment"># Metrics & analysis</span>
+├── <span class="str">experiments/</span>       <span class="comment"># Experiment scripts & configs</span>
+├── <span class="str">results/</span>           <span class="comment"># Output files and plots</span>
+└── <span class="str">report/</span>            <span class="comment"># Final report PDF</span></pre>
+                        </div>
+                    </div>
+
+                    <!-- Report Requirements -->
+                    <div class="req-block" id="req-report">
+                        <div class="req-block-header">
+                            <div class="req-icon req-icon-green">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <polyline points="14 2 14 8 20 8" />
+                                    <line x1="16" y1="13" x2="8" y2="13" />
+                                    <line x1="16" y1="17" x2="8" y2="17" />
+                                    <polyline points="10 9 9 9 8 9" />
+                                </svg>
+                            </div>
+                            <h2>Final Report Requirements</h2>
+                        </div>
+                        <p>The final report is the primary graded artifact. It should read as a self-contained research
+                            paper, written in <strong>English</strong>, formatted in <strong>IEEE two-column
+                                format</strong>, and being a minimum of <strong>8 pages</strong> (excluding references).
+                        </p>
+
+                        <div class="report-sections" id="report-sections">
+                            <div class="report-section">
+                                <div class="rs-label rs-mandatory">Required</div>
+                                <div class="rs-body">
+                                    <h4>Abstract</h4>
+                                    <p>A 150–250 word summary of the problem, methods, results, and conclusions. Write
+                                        this last.</p>
+                                </div>
+                            </div>
+                            <div class="report-section">
+                                <div class="rs-label rs-mandatory">Required</div>
+                                <div class="rs-body">
+                                    <h4>Introduction</h4>
+                                    <p>Motivate the problem, state the research question clearly, and briefly preview
+                                        your approach and findings.</p>
+                                </div>
+                            </div>
+                            <div class="report-section">
+                                <div class="rs-label rs-mandatory">Required</div>
+                                <div class="rs-body">
+                                    <h4>Related Work</h4>
+                                    <p>Cover at least 10 relevant papers. Group by theme. Situate your work in the
+                                        existing landscape — don't just list papers.</p>
+                                </div>
+                            </div>
+                            <div class="report-section">
+                                <div class="rs-label rs-mandatory">Required</div>
+                                <div class="rs-body">
+                                    <h4>Methodology</h4>
+                                    <p>Describe your approach in detail. Include diagrams where appropriate. Someone
+                                        should be able to replicate your work from this section alone.</p>
+                                </div>
+                            </div>
+                            <div class="report-section">
+                                <div class="rs-label rs-mandatory">Required</div>
+                                <div class="rs-body">
+                                    <h4>Experimental Setup</h4>
+                                    <p>Describe datasets, baselines, metrics, hardware, and hyperparameters used in your
+                                        experiments.</p>
+                                </div>
+                            </div>
+                            <div class="report-section">
+                                <div class="rs-label rs-mandatory">Required</div>
+                                <div class="rs-body">
+                                    <h4>Results & Discussion</h4>
+                                    <p>Present results in tables and figures. Analyze them critically — what works, what
+                                        doesn't, and why?</p>
+                                </div>
+                            </div>
+                            <div class="report-section">
+                                <div class="rs-label rs-mandatory">Required</div>
+                                <div class="rs-body">
+                                    <h4>Conclusion</h4>
+                                    <p>Summarize findings, acknowledge limitations honestly, and propose future
+                                        directions.</p>
+                                </div>
+                            </div>
+                            <div class="report-section">
+                                <div class="rs-label rs-optional">Bonus</div>
+                                <div class="rs-body">
+                                    <h4>Ablation Study</h4>
+                                    <p>Systematically vary one aspect of your approach at a time to understand what
+                                        matters most.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Integrity -->
+                    <div class="req-block req-block-warning" id="req-integrity">
+                        <div class="req-block-header">
+                            <div class="req-icon req-icon-red">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                                    <line x1="12" y1="9" x2="12" y2="13" />
+                                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                                </svg>
+                            </div>
+                            <h2>Academic Integrity</h2>
+                        </div>
+                        <div class="integrity-notice">
+                            <p>TU Delft takes academic integrity extremely seriously. All submitted work must be
+                                entirely your own. This includes code, text, and experimental results.</p>
+                        </div>
+                        <div class="integrity-rules">
+                            <div class="ir-item ir-allowed">
+                                <div class="ir-icon">✓</div>
+                                <div>
+                                    <strong>Allowed</strong>
+                                    <ul>
+                                        <li>Using open-source libraries (with proper attribution)</li>
+                                        <li>Discussing ideas with peers at a conceptual level</li>
+                                        <li>Using LLMs (ChatGPT, Copilot) <em>as tools</em>, with disclosure</li>
+                                        <li>Referencing and building on published code (with citation)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ir-item ir-notallowed">
+                                <div class="ir-icon">✗</div>
+                                <div>
+                                    <strong>Not Allowed</strong>
+                                    <ul>
+                                        <li>Copying code from peers, even partially</li>
+                                        <li>Using LLMs to write substantial sections of your report without disclosure
+                                        </li>
+                                        <li>Fabricating or selectively omitting experimental results</li>
+                                        <li>Sharing your code or results with other students before submission</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="integrity-footer">When in doubt, ask. It is always better to ask permission than to
+                            face consequences later.</p>
+                    </div>
+
+                </div>
+
+                <!-- Right Sidebar -->
+                <aside class="req-sidebar">
+
+                    <div class="sidebar-card sidebar-grades" id="sidebar-grades">
+                        <h4>Grading Breakdown</h4>
+                        <div class="grade-items">
+                            <div class="grade-item">
+                                <div class="grade-label">Final Report</div>
+                                <div class="grade-bar-wrap">
+                                    <div class="grade-bar" style="width: 50%"></div>
+                                </div>
+                                <div class="grade-pct">50%</div>
+                            </div>
+                            <div class="grade-item">
+                                <div class="grade-label">Code & Reproducibility</div>
+                                <div class="grade-bar-wrap">
+                                    <div class="grade-bar" style="width: 30%"></div>
+                                </div>
+                                <div class="grade-pct">30%</div>
+                            </div>
+                            <div class="grade-item">
+                                <div class="grade-label">Presentation</div>
+                                <div class="grade-bar-wrap">
+                                    <div class="grade-bar" style="width: 20%"></div>
+                                </div>
+                                <div class="grade-pct">20%</div>
+                            </div>
+                        </div>
+                        <p class="grade-note">A minimum grade of 5.5 is required on each component to pass.</p>
+                    </div>
+
+                    <div class="sidebar-card" id="sidebar-deadlines">
+                        <h4>Key Deadlines</h4>
+                        <div class="deadline-list">
+                            <div class="deadline-item">
+                                <div class="dl-dot dl-dot-cyan"></div>
+                                <div class="dl-body">
+                                    <strong>Repo Access Shared</strong>
+                                    <span>Week 1</span>
+                                </div>
+                            </div>
+                            <div class="deadline-item">
+                                <div class="dl-dot dl-dot-cyan"></div>
+                                <div class="dl-body">
+                                    <strong>Literature Summary</strong>
+                                    <span>Week 2 – Friday 23:59</span>
+                                </div>
+                            </div>
+                            <div class="deadline-item">
+                                <div class="dl-dot dl-dot-blue"></div>
+                                <div class="dl-body">
+                                    <strong>Baseline Results</strong>
+                                    <span>Week 4 – Friday 23:59</span>
+                                </div>
+                            </div>
+                            <div class="deadline-item">
+                                <div class="dl-dot dl-dot-blue"></div>
+                                <div class="dl-body">
+                                    <strong>Mid-point Check-in</strong>
+                                    <span>Week 5 – Scheduled Meeting</span>
+                                </div>
+                            </div>
+                            <div class="deadline-item">
+                                <div class="dl-dot dl-dot-green"></div>
+                                <div class="dl-body">
+                                    <strong>Final Code Submission</strong>
+                                    <span>Week 9 – Friday 23:59</span>
+                                </div>
+                            </div>
+                            <div class="deadline-item">
+                                <div class="dl-dot dl-dot-red"></div>
+                                <div class="dl-body">
+                                    <strong>Final Report Due</strong>
+                                    <span>Week 10 – Friday 23:59</span>
+                                </div>
+                            </div>
+                            <div class="deadline-item">
+                                <div class="dl-dot dl-dot-red"></div>
+                                <div class="dl-body">
+                                    <strong>Presentations</strong>
+                                    <span>Week 11 – TBD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card sidebar-contact" id="sidebar-contact">
+                        <h4>Contact & Support</h4>
+                        <div class="contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            <span>Email TA via Brightspace</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
+                                stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                            <span>Office hours: By appointment</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
+                                stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                            </svg>
+                            <span>Q&A: Brightspace discussion board</span>
+                        </div>
+                        <p class="contact-note">Response time: within 2 business days. Please check the existing Q&A
+                            before posting.</p>
+                    </div>
+
+                    <div class="sidebar-card sidebar-tip" id="sidebar-success">
+                        <div class="tip-icon">🏆</div>
+                        <h4>How to Succeed</h4>
+                        <p>The students who do best are those who start early, stay curious, and treat setbacks as
+                            learning opportunities — not failures. Your research question doesn't have to have a
+                            positive answer to produce a great report.</p>
+                    </div>
+
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                            <polygon points="16,2 30,28 2,28" fill="#00A6D6" />
+                            <polygon points="16,10 24,28 8,28" fill="#0C2340" />
+                        </svg>
+                        <span>ML4SE</span>
+                    </div>
+                    <p>Machine Learning for Software Engineering<br />TU Delft · EEMCS Faculty</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Course Pages</h4>
+                    <ul>
+                        <li><a href="project.html">Project Information</a></li>
+                        <li><a href="research.html">Existing Research</a></li>
+                        <li><a href="requirements.html">Student Requirements</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>External Links</h4>
+                    <ul>
+                        <li><a href="https://www.tudelft.nl" target="_blank" rel="noopener">TU Delft</a></li>
+                        <li><a href="https://brightspace.tudelft.nl" target="_blank" rel="noopener">Brightspace</a></li>
+                        <li><a href="https://arxiv.org" target="_blank" rel="noopener">arXiv</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025–2026 ML4SE · TU Delft · Software Engineering Research Group</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
