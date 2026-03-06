@@ -1,292 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ML4SE – Machine Learning for Software Engineering | TU Delft</title>
-  <meta name="description" content="Course website for ML4SE at TU Delft. Find project information, related research, and course requirements." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ML4SE – Machine Learning for Software Engineering | TU Delft</title>
+    <meta name="description"
+        content="Course website for ML4SE at TU Delft. Find project information, related research, and course requirements." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-brand">
-        <div class="nav-logo">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <polygon points="16,2 30,28 2,28" fill="#00A6D6"/>
-            <polygon points="16,10 24,28 8,28" fill="#0C2340"/>
-          </svg>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <div class="nav-logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <polygon points="16,2 30,28 2,28" fill="#00A6D6" />
+                        <polygon points="16,10 24,28 8,28" fill="#0C2340" />
+                    </svg>
+                </div>
+                <div class="nav-brand-text">
+                    <span class="nav-title">ML4SE</span>
+                    <span class="nav-subtitle">TU Delft</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active" id="nav-home">Home</a></li>
+                <li><a href="project.html" class="nav-link" id="nav-project">Project</a></li>
+                <li><a href="research.html" class="nav-link" id="nav-research">Research</a></li>
+                <li><a href="requirements.html" class="nav-link" id="nav-requirements">Requirements</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-        <div class="nav-brand-text">
-          <span class="nav-title">ML4SE</span>
-          <span class="nav-subtitle">TU Delft</span>
-        </div>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="nav-link active" id="nav-home">Home</a></li>
-        <li><a href="project.html" class="nav-link" id="nav-project">Project</a></li>
-        <li><a href="research.html" class="nav-link" id="nav-research">Research</a></li>
-        <li><a href="requirements.html" class="nav-link" id="nav-requirements">Requirements</a></li>
-      </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-bg">
-      <div class="hero-grid"></div>
-      <div class="hero-glow hero-glow-1"></div>
-      <div class="hero-glow hero-glow-2"></div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        <span>2025–2026 Academic Year</span>
-      </div>
-      <h1 class="hero-title">
-        Machine Learning<br/>
-        <span class="hero-title-accent">for Software Engineering</span>
-      </h1>
-      <p class="hero-desc">
-        Welcome to <strong>ML4SE</strong> at TU Delft. This course explores the intersection of 
-        machine learning techniques and software engineering challenges — from code generation 
-        to bug detection, and beyond.
-      </p>
-      <div class="hero-actions">
-        <a href="project.html" class="btn btn-primary" id="hero-project-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
-          View Project
-        </a>
-        <a href="requirements.html" class="btn btn-secondary" id="hero-req-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-          Requirements
-        </a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="code-window">
-        <div class="code-header">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-          <span class="code-title">ml4se_project.py</span>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
         </div>
-        <pre class="code-body"><span class="kw">from</span> transformers <span class="kw">import</span> AutoModel
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>2025–2026 Academic Year</span>
+                </div>
+                <h1 class="hero-title">
+                    Machine Learning<br />
+                    <span class="hero-title-accent">for Software Engineering</span>
+                </h1>
+                <p class="hero-desc">
+                    Welcome to <strong>ML4SE</strong> at TU Delft. This course explores the intersection of
+                    machine learning techniques and software engineering challenges — with a focus on
+                    applying <strong>Diffusion Language Models</strong> to Automatic Code Refactoring.
+                </p>
+                <div class="hero-actions">
+                    <a href="project.html" class="btn btn-primary" id="hero-project-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
+                            <polyline points="13 2 13 9 20 9" />
+                        </svg>
+                        View Project
+                    </a>
+                    <a href="requirements.html" class="btn btn-secondary" id="hero-req-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="9 11 12 14 22 4" />
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                        </svg>
+                        Requirements
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="code-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="code-title">ml4se_refactor.py</span>
+                    </div>
+                    <pre class="code-body"><span class="kw">from</span> diffucoder <span class="kw">import</span> DiffuCoder
 <span class="kw">import</span> torch
 
-<span class="comment"># dLLM-based variable renaming</span>
-<span class="kw">class</span> <span class="cls">ML4SEProject</span>:
+<span class="comment"># dLLM-based code refactoring</span>
+<span class="kw">class</span> <span class="cls">AutoRefactorer</span>:
     <span class="kw">def</span> <span class="fn">__init__</span>(self):
-        self.model = <span class="cls">DiffusionLM</span>()
-        self.task = <span class="str">"code_identifier_rename"</span>
+        self.model = <span class="cls">DiffuCoder</span>(<span class="str">"7B"</span>)
+        self.task = <span class="str">"code_refactoring"</span>
 
-    <span class="kw">def</span> <span class="fn">predict</span>(self, code_ctx):
-        <span class="comment"># Mask &amp; diffuse identifier tokens</span>
-        masked = self.<span class="fn">mask_identifiers</span>(code_ctx)
+    <span class="kw">def</span> <span class="fn">refactor</span>(self, code_ctx):
+        <span class="comment"># Mask &amp; diffuse code tokens</span>
+        masked = self.<span class="fn">mask_tokens</span>(code_ctx)
         <span class="kw">return</span> self.model.<span class="fn">generate</span>(masked)</pre>
-      </div>
-    </div>
-    <div class="hero-scroll">
-      <span>Scroll to explore</span>
-      <div class="scroll-arrow"></div>
-    </div>
-  </section>
-
-  <!-- Quick Nav Cards -->
-  <section class="quick-nav section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Course Navigation</h2>
-        <p>Three key areas to help you succeed in this course</p>
-      </div>
-      <div class="cards-grid">
-        <a href="project.html" class="card card-hover" id="card-project">
-          <div class="card-icon card-icon-cyan">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          </div>
-          <div class="card-content">
-            <h3>Project Info</h3>
-            <p>Understand the project scope, objectives, datasets, and deliverables for your ML4SE assignment.</p>
-          </div>
-          <div class="card-arrow">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </div>
-        </a>
-        <a href="research.html" class="card card-hover" id="card-research">
-          <div class="card-icon card-icon-blue">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-          </div>
-          <div class="card-content">
-            <h3>Existing Research</h3>
-            <p>Explore the state-of-the-art papers, tools, and datasets that form the scientific foundation of this project.</p>
-          </div>
-          <div class="card-arrow">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </div>
-        </a>
-        <a href="requirements.html" class="card card-hover" id="card-requirements">
-          <div class="card-icon card-icon-green">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-          </div>
-          <div class="card-content">
-            <h3>Student Requirements</h3>
-            <p>Review what's expected of you: deliverables, deadlines, evaluation criteria, and academic integrity.</p>
-          </div>
-          <div class="card-arrow">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats Banner -->
-  <section class="stats-banner">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item">
-          <div class="stat-num">3</div>
-          <div class="stat-label">Project Phases</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <div class="stat-num">20+</div>
-          <div class="stat-label">Reference Papers</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <div class="stat-num">dLLM</div>
-          <div class="stat-label">Core Technology</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <div class="stat-num">SE</div>
-          <div class="stat-label">Application Domain</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Course -->
-  <section class="about section">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-text">
-          <div class="section-tag">About the Course</div>
-          <h2>Why ML4SE?</h2>
-          <p>Software engineering is increasingly empowered by AI. This course bridges the gap between modern machine learning — particularly large language models and diffusion-based approaches — and real-world software engineering tasks.</p>
-          <p>Students work on cutting-edge research problems, gaining hands-on experience with state-of-the-art methods and contributing original insights to the field.</p>
-          <div class="about-highlights">
-            <div class="highlight-item">
-              <div class="highlight-icon">🧠</div>
-              <div>
-                <strong>Research-driven</strong>
-                <p>Work on open problems with real scientific impact</p>
-              </div>
-            </div>
-            <div class="highlight-item">
-              <div class="highlight-icon">💻</div>
-              <div>
-                <strong>Hands-on</strong>
-                <p>Implement and evaluate ML models on real codebases</p>
-              </div>
-            </div>
-            <div class="highlight-item">
-              <div class="highlight-icon">📝</div>
-              <div>
-                <strong>Academic Writing</strong>
-                <p>Produce a research report meeting academic standards</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="about-visual">
-          <div class="pipeline-card">
-            <div class="pipeline-title">ML4SE Pipeline</div>
-            <div class="pipeline-steps">
-              <div class="pipeline-step">
-                <div class="step-num">01</div>
-                <div class="step-content">
-                  <strong>Literature Review</strong>
-                  <span>Study existing methods</span>
                 </div>
-              </div>
-              <div class="pipeline-arrow">↓</div>
-              <div class="pipeline-step">
-                <div class="step-num">02</div>
-                <div class="step-content">
-                  <strong>Implementation</strong>
-                  <span>Build your approach</span>
-                </div>
-              </div>
-              <div class="pipeline-arrow">↓</div>
-              <div class="pipeline-step">
-                <div class="step-num">03</div>
-                <div class="step-content">
-                  <strong>Evaluation</strong>
-                  <span>Compare with baselines</span>
-                </div>
-              </div>
-              <div class="pipeline-arrow">↓</div>
-              <div class="pipeline-step">
-                <div class="step-num">04</div>
-                <div class="step-content">
-                  <strong>Report</strong>
-                  <span>Document your findings</span>
-                </div>
-              </div>
             </div>
-          </div>
+        </div><!-- end hero-inner -->
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-              <polygon points="16,2 30,28 2,28" fill="#00A6D6"/>
-              <polygon points="16,10 24,28 8,28" fill="#0C2340"/>
-            </svg>
-            <span>ML4SE</span>
-          </div>
-          <p>Machine Learning for Software Engineering<br/>TU Delft · EEMCS Faculty</p>
+    <!-- Quick Nav Cards -->
+    <section class="quick-nav section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Course Navigation</h2>
+                <p>Three key areas to help you succeed in this course</p>
+            </div>
+            <div class="cards-grid">
+                <a href="project.html" class="card card-hover" id="card-project">
+                    <div class="card-icon card-icon-cyan">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Project Info</h3>
+                        <p>Understand the project scope, objectives, datasets, and deliverables for your ML4SE
+                            assignment.</p>
+                    </div>
+                    <div class="card-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </div>
+                </a>
+                <a href="research.html" class="card card-hover" id="card-research">
+                    <div class="card-icon card-icon-blue">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                            <line x1="11" y1="8" x2="11" y2="14" />
+                            <line x1="8" y1="11" x2="14" y2="11" />
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Existing Research</h3>
+                        <p>Explore the state-of-the-art papers, tools, and datasets that form the scientific foundation
+                            of this project.</p>
+                    </div>
+                    <div class="card-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </div>
+                </a>
+                <a href="requirements.html" class="card card-hover" id="card-requirements">
+                    <div class="card-icon card-icon-green">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <polyline points="9 11 12 14 22 4" />
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Student Requirements</h3>
+                        <p>Review what's expected of you: deliverables, deadlines, evaluation criteria, and academic
+                            integrity.</p>
+                    </div>
+                    <div class="card-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="footer-links">
-          <h4>Course Pages</h4>
-          <ul>
-            <li><a href="project.html">Project Information</a></li>
-            <li><a href="research.html">Existing Research</a></li>
-            <li><a href="requirements.html">Student Requirements</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>External Links</h4>
-          <ul>
-            <li><a href="https://www.tudelft.nl" target="_blank" rel="noopener">TU Delft</a></li>
-            <li><a href="https://brightspace.tudelft.nl" target="_blank" rel="noopener">Brightspace</a></li>
-            <li><a href="https://arxiv.org" target="_blank" rel="noopener">arXiv</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025–2026 ML4SE · TU Delft · Software Engineering Research Group</p>
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <script src="main.js"></script>
+    <!-- Stats Banner -->
+    <section class="stats-banner">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-num">3</div>
+                    <div class="stat-label">Project Phases</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-num">20+</div>
+                    <div class="stat-label">Reference Papers</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-num">dLLM</div>
+                    <div class="stat-label">Core Technology</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-num">SE</div>
+                    <div class="stat-label">Application Domain</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Course -->
+    <section class="about section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="section-tag">About the Course</div>
+                    <h2>Why ML4SE?</h2>
+                    <p>Software engineering is increasingly empowered by AI. This course bridges the gap between modern
+                        machine learning — particularly large language models and diffusion-based approaches — and
+                        real-world software engineering tasks.</p>
+                    <p>Students work on cutting-edge research problems, gaining hands-on experience with
+                        state-of-the-art methods and contributing original insights to the field.</p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🧠</div>
+                            <div>
+                                <strong>Research-driven</strong>
+                                <p>Work on open problems with real scientific impact</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">💻</div>
+                            <div>
+                                <strong>Hands-on</strong>
+                                <p>Implement and evaluate ML models on real codebases</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">📝</div>
+                            <div>
+                                <strong>Academic Writing</strong>
+                                <p>Produce a research report meeting academic standards</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="pipeline-card">
+                        <div class="pipeline-title">ML4SE Pipeline</div>
+                        <div class="pipeline-steps">
+                            <div class="pipeline-step">
+                                <div class="step-num">01</div>
+                                <div class="step-content">
+                                    <strong>Literature Review</strong>
+                                    <span>Study existing methods</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-arrow">↓</div>
+                            <div class="pipeline-step">
+                                <div class="step-num">02</div>
+                                <div class="step-content">
+                                    <strong>Implementation</strong>
+                                    <span>Build your approach</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-arrow">↓</div>
+                            <div class="pipeline-step">
+                                <div class="step-num">03</div>
+                                <div class="step-content">
+                                    <strong>Evaluation</strong>
+                                    <span>Compare with baselines</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-arrow">↓</div>
+                            <div class="pipeline-step">
+                                <div class="step-num">04</div>
+                                <div class="step-content">
+                                    <strong>Report</strong>
+                                    <span>Document your findings</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                            <polygon points="16,2 30,28 2,28" fill="#00A6D6" />
+                            <polygon points="16,10 24,28 8,28" fill="#0C2340" />
+                        </svg>
+                        <span>ML4SE</span>
+                    </div>
+                    <p>Machine Learning for Software Engineering<br />TU Delft · EEMCS Faculty</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Course Pages</h4>
+                    <ul>
+                        <li><a href="project.html">Project Information</a></li>
+                        <li><a href="research.html">Existing Research</a></li>
+                        <li><a href="requirements.html">Student Requirements</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>External Links</h4>
+                    <ul>
+                        <li><a href="https://www.tudelft.nl" target="_blank" rel="noopener">TU Delft</a></li>
+                        <li><a href="https://brightspace.tudelft.nl" target="_blank" rel="noopener">Brightspace</a></li>
+                        <li><a href="https://arxiv.org" target="_blank" rel="noopener">arXiv</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025–2026 ML4SE · TU Delft · Software Engineering Research Group</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
+
 </html>

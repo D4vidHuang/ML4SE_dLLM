@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Information – ML4SE | TU Delft</title>
     <meta name="description"
-        content="Project information for ML4SE: using diffusion-based language models for code identifier renaming at TU Delft." />
+        content="Project information for ML4SE: using diffusion-based language models for automatic code refactoring at TU Delft." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -63,10 +63,10 @@
                     </svg>
                     Project Information
                 </div>
-                <h1>Diffusion LLMs for<br /><span class="accent">Code Identifier Renaming</span></h1>
-                <p>Explore how discrete diffusion language models can be applied to the software engineering task of
-                    variable and method identifier renaming — improving code readability and maintainability
-                    automatically.</p>
+                <h1>Diffusion LLMs for<br /><span class="accent">Automatic Code Refactoring</span></h1>
+                <p>This project investigates whether discrete diffusion language models can automate key software
+                    refactoring tasks — producing higher-quality code than autoregressive baselines while offering
+                    unique bidirectional generation capabilities.</p>
             </div>
         </div>
     </section>
@@ -76,34 +76,174 @@
         <div class="container">
             <div class="overview-grid">
                 <div class="overview-main">
+
+                    <!-- Overview -->
                     <div class="content-block">
                         <h2>Project Overview</h2>
                         <p>
-                            This project investigates the application of <strong>Discrete Diffusion Language Models
-                                (dLLMs)</strong> to the task of <strong>code identifier renaming</strong> in Java source
-                            code. Poor identifier naming is one of the most widespread forms of technical debt, leading
-                            to code that is difficult to understand, maintain, and extend.
+                            Modern software systems accumulate significant <strong>technical debt</strong> over time.
+                            Code refactoring — the process of improving code structure without changing external
+                            behavior — is a critical but time-consuming engineering activity. Recent advances in
+                            <strong>Discrete Diffusion Language Models (dLLMs)</strong> open a new avenue: instead of
+                            autoregressively predicting tokens left-to-right, dLLMs iteratively refine entire code spans
+                            bidirectionally, making them uniquely well-suited to structured code transformation tasks.
                         </p>
                         <p>
-                            Traditional approaches rely on autoregressive models (e.g., CodeBERT, CodeT5) or rule-based
-                            heuristics. This project asks: <em>can a non-autoregressive, diffusion-based approach
-                                achieve competitive or superior results?</em>
+                            This project compares state-of-the-art dLLMs (DiffuCoder, DreamCoder) against autoregressive
+                            code LLMs (Qwen-Coder, CodeLlama, CodeGemma) on realistic <strong>automatic code
+                                refactoring</strong> benchmarks, with each student group investigating a distinct
+                            refactoring scenario.
                         </p>
                     </div>
 
+                    <!-- Models Studied -->
                     <div class="content-block">
-                        <h2>Research Question</h2>
-                        <div class="rq-box">
-                            <div class="rq-label">RQ</div>
-                            <blockquote>
-                                "To what extent can discrete diffusion language models rename poor code identifiers in
-                                Java source code, compared to autoregressive and fill-in-the-middle baselines?"
-                            </blockquote>
+                        <h2>Models Under Study</h2>
+                        <p>Each student will run experiments comparing at least one diffusion model against at least one
+                            autoregressive baseline relevant to their research question.</p>
+                        <div class="models-comparison">
+                            <div class="model-group" id="model-group-diffusion">
+                                <div class="model-group-header model-group-header-cyan">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path d="M12 8v4l3 3" />
+                                    </svg>
+                                    Diffusion Models
+                                </div>
+                                <div class="model-group-items">
+                                    <div class="model-chip model-chip-cyan">
+                                        <span class="model-chip-name">DiffuCoder</span>
+                                        <span class="model-chip-desc">Discrete dLLM fine-tuned on code corpora; primary
+                                            focus of this project</span>
+                                    </div>
+                                    <div class="model-chip model-chip-cyan">
+                                        <span class="model-chip-name">DreamCoder</span>
+                                        <span class="model-chip-desc">Diffusion-based model combining program synthesis
+                                            with neural guidance</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="model-group" id="model-group-ar">
+                                <div class="model-group-header model-group-header-blue">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="5 12 12 5 19 12" />
+                                        <line x1="12" y1="5" x2="12" y2="19" />
+                                    </svg>
+                                    Autoregressive Baselines
+                                </div>
+                                <div class="model-group-items">
+                                    <div class="model-chip model-chip-blue">
+                                        <span class="model-chip-name">Qwen-Coder</span>
+                                        <span class="model-chip-desc">Alibaba's state-of-the-art code LLM with strong
+                                            reasoning capability</span>
+                                    </div>
+                                    <div class="model-chip model-chip-blue">
+                                        <span class="model-chip-name">CodeLlama</span>
+                                        <span class="model-chip-desc">Meta's open code LLM supporting fill-in-the-middle
+                                            generation</span>
+                                    </div>
+                                    <div class="model-chip model-chip-blue">
+                                        <span class="model-chip-name">CodeGemma</span>
+                                        <span class="model-chip-desc">Google DeepMind's code-specialized Gemma
+                                            model</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
+                    <!-- Two Student Groups -->
                     <div class="content-block">
-                        <h2>Methodology</h2>
+                        <h2>Student Groups &amp; Research Questions</h2>
+                        <p>The cohort is divided into two groups. Each group explores a different refactoring domain
+                            while sharing the common dLLM-vs-AR experimental framework. Group titles and final research
+                            questions will be confirmed after the kick-off session.</p>
+
+                        <!-- Group A -->
+                        <div class="student-group" id="group-a">
+                            <div class="group-header group-header-cyan">
+                                <div class="group-badge">Group A</div>
+                                <div class="group-title-area">
+                                    <h3>[Placeholder: Structural Refactoring with dLLMs]</h3>
+                                    <p>Focusing on macro-level code transformations such as method extraction, class
+                                        restructuring, and design pattern application.</p>
+                                </div>
+                            </div>
+                            <div class="rq-list">
+                                <div class="rq-item" id="rq-a1">
+                                    <div class="rq-num">RQ A1</div>
+                                    <div class="rq-text">[Placeholder] To what extent can DiffuCoder perform
+                                        method-extraction refactoring compared to Qwen-Coder on Java corpora?</div>
+                                </div>
+                                <div class="rq-item" id="rq-a2">
+                                    <div class="rq-num">RQ A2</div>
+                                    <div class="rq-text">[Placeholder] How does bidirectional diffusion generation
+                                        affect the correctness of class decomposition refactoring?</div>
+                                </div>
+                                <div class="rq-item" id="rq-a3">
+                                    <div class="rq-num">RQ A3</div>
+                                    <div class="rq-text">[Placeholder] Can dLLMs automatically identify and apply design
+                                        patterns (e.g., Strategy, Factory) more reliably than AR models?</div>
+                                </div>
+                                <div class="rq-item" id="rq-a4">
+                                    <div class="rq-num">RQ A4</div>
+                                    <div class="rq-text">[Placeholder] What is the effect of context window size on
+                                        DreamCoder's ability to perform long-range structural refactoring?</div>
+                                </div>
+                                <div class="rq-item" id="rq-a5">
+                                    <div class="rq-num">RQ A5</div>
+                                    <div class="rq-text">[Placeholder] How do dLLMs compare to CodeLlama on the task of
+                                        inline variable and parameter refactoring in Python?</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Group B -->
+                        <div class="student-group" id="group-b">
+                            <div class="group-header group-header-blue">
+                                <div class="group-badge group-badge-blue">Group B</div>
+                                <div class="group-title-area">
+                                    <h3>[Placeholder: Code Quality &amp; Smell Removal with dLLMs]</h3>
+                                    <p>Focusing on micro-level code quality improvements such as removing code smells,
+                                        improving readability, and reducing complexity.</p>
+                                </div>
+                            </div>
+                            <div class="rq-list">
+                                <div class="rq-item rq-item-blue" id="rq-b1">
+                                    <div class="rq-num rq-num-blue">RQ B1</div>
+                                    <div class="rq-text">[Placeholder] To what extent can DiffuCoder automatically
+                                        detect and remove God Class code smells compared to CodeGemma?</div>
+                                </div>
+                                <div class="rq-item rq-item-blue" id="rq-b2">
+                                    <div class="rq-num rq-num-blue">RQ B2</div>
+                                    <div class="rq-text">[Placeholder] How effectively do dLLMs reduce cyclomatic
+                                        complexity in real-world Java methods when compared to autoregressive baselines?
+                                    </div>
+                                </div>
+                                <div class="rq-item rq-item-blue" id="rq-b3">
+                                    <div class="rq-num rq-num-blue">RQ B3</div>
+                                    <div class="rq-text">[Placeholder] Can DiffuCoder improve readability metrics (e.g.,
+                                        Halstead difficulty) without introducing functional regressions?</div>
+                                </div>
+                                <div class="rq-item rq-item-blue" id="rq-b4">
+                                    <div class="rq-num rq-num-blue">RQ B4</div>
+                                    <div class="rq-text">[Placeholder] How do diffusion-generated refactorings compare
+                                        to developer-accepted refactorings in terms of human evaluation scores?</div>
+                                </div>
+                                <div class="rq-item rq-item-blue" id="rq-b5">
+                                    <div class="rq-num rq-num-blue">RQ B5</div>
+                                    <div class="rq-text">[Placeholder] What is the impact of diffusion step count on
+                                        refactoring quality and semantic equivalence preservation?</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Methodology -->
+                    <div class="content-block">
+                        <h2>General Methodology</h2>
                         <div class="method-steps">
                             <div class="method-step" id="step-1">
                                 <div class="method-step-header">
@@ -114,11 +254,11 @@
                                                 d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                                         </svg>
                                     </div>
-                                    <h3>1. Bad Naming Detection</h3>
+                                    <h3>1. Benchmark Construction</h3>
                                 </div>
-                                <p>Use a multi-probe detector (overconfidence + context sensitivity) to identify poor
-                                    identifier names in Java code. Indicators include single-letter names, dictionary
-                                    mismatches, and low contextual coherence.</p>
+                                <p>Identify and prepare a dataset of before/after refactoring pairs from real-world
+                                    developer commits. Align it to your specific research question (structural or
+                                    quality refactoring).</p>
                             </div>
                             <div class="method-step" id="step-2">
                                 <div class="method-step-header">
@@ -129,11 +269,11 @@
                                             <path d="M3 9h18M9 21V9" />
                                         </svg>
                                     </div>
-                                    <h3>2. Contextual Masking</h3>
+                                    <h3>2. Context Extraction &amp; Prompting</h3>
                                 </div>
-                                <p>Extract code context around the identified bad-name token. Mask the target identifier
-                                    to enable the model to infer a better replacement using surrounding code semantics.
-                                </p>
+                                <p>Extract sufficient code context. For dLLMs, use masking strategies targeting the
+                                    region to be refactored. For AR baselines, design appropriate instruction or FIM
+                                    prompts.</p>
                             </div>
                             <div class="method-step" id="step-3">
                                 <div class="method-step-header">
@@ -144,10 +284,10 @@
                                             <path d="M12 8v4l3 3" />
                                         </svg>
                                     </div>
-                                    <h3>3. Diffusion Inference</h3>
+                                    <h3>3. Model Inference</h3>
                                 </div>
-                                <p>Apply the dLLM (e.g., MDLM, MDLM-GPT, or similar) to iteratively refine the masked
-                                    token via a forward-backward diffusion process, producing a renaming suggestion.</p>
+                                <p>Run your selected dLLM and AR models on the benchmark. Log all outputs, runtimes, and
+                                    any failure cases (OOM, invalid output, etc.).</p>
                             </div>
                             <div class="method-step" id="step-4">
                                 <div class="method-step-header">
@@ -159,52 +299,13 @@
                                     </div>
                                     <h3>4. Evaluation</h3>
                                 </div>
-                                <p>Evaluate using Exact Match (EM), BLEU, and LLM-as-judge metrics against ground-truth
-                                    renamings from real developer commits. Compare against FIM-based and autoregressive
-                                    baselines.</p>
+                                <p>Evaluate using metric(s) appropriate to your RQ: CodeBLEU, exact match, test-suite
+                                    pass rate, static analysis scores, or LLM-as-judge. Discuss quantitative and
+                                    qualitative results.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="content-block">
-                        <h2>Datasets</h2>
-                        <div class="dataset-cards">
-                            <div class="dataset-card" id="dataset-diffusion">
-                                <div class="dataset-badge dataset-badge-cyan">Primary</div>
-                                <h4>Diffusion Benchmark</h4>
-                                <p>A curated dataset of Java variable renaming instances extracted from real-world
-                                    developer commits. Used as the main evaluation corpus for diffusion-based models.
-                                </p>
-                                <div class="dataset-meta">
-                                    <span class="meta-tag">Java</span>
-                                    <span class="meta-tag">Variable Renaming</span>
-                                    <span class="meta-tag">Ground-truth Labels</span>
-                                </div>
-                            </div>
-                            <div class="dataset-card" id="dataset-fim">
-                                <div class="dataset-badge dataset-badge-blue">Baseline</div>
-                                <h4>FIM / AR Benchmark</h4>
-                                <p>A fill-in-the-middle style benchmark used to evaluate autoregressive and FIM-based
-                                    baseline models. Enables controlled comparison with the diffusion approach.</p>
-                                <div class="dataset-meta">
-                                    <span class="meta-tag">Java</span>
-                                    <span class="meta-tag">FIM Format</span>
-                                    <span class="meta-tag">Multi-model</span>
-                                </div>
-                            </div>
-                            <div class="dataset-card" id="dataset-developer">
-                                <div class="dataset-badge dataset-badge-green">Extended</div>
-                                <h4>Developer Dataset</h4>
-                                <p>An extended dataset focusing on real developer refactoring sessions for code variable
-                                    name improvements. Provides additional evaluation diversity.</p>
-                                <div class="dataset-meta">
-                                    <span class="meta-tag">Refactoring</span>
-                                    <span class="meta-tag">Developer Commits</span>
-                                    <span class="meta-tag">Extended Scope</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Sidebar -->
@@ -217,7 +318,14 @@
                                     stroke-width="2">
                                     <polyline points="20 6 9 17 4 12" />
                                 </svg>
-                                <span>Language: <strong>Java</strong></span>
+                                <span>Task: <strong>Code Refactoring</strong></span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                <span>Primary model: <strong>DiffuCoder</strong></span>
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
@@ -231,14 +339,7 @@
                                     stroke-width="2">
                                     <polyline points="20 6 9 17 4 12" />
                                 </svg>
-                                <span>Task: <strong>Identifier Renaming</strong></span>
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
-                                    stroke-width="2">
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                <span>Metric: <strong>Exact Match + BLEU</strong></span>
+                                <span>Groups: <strong>A &amp; B (5 students each)</strong></span>
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
@@ -247,40 +348,55 @@
                                 </svg>
                                 <span>Domain: <strong>SE + NLP</strong></span>
                             </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                <span>Target: <strong>ICSE 2027</strong></span>
+                            </li>
                         </ul>
                     </div>
 
                     <div class="sidebar-card" id="sidebar-models">
-                        <h4>Models Studied</h4>
+                        <h4>Models at a Glance</h4>
                         <div class="model-list">
                             <div class="model-item model-item-cyan">
-                                <span class="model-name">MDLM</span>
+                                <span class="model-name">DiffuCoder</span>
                                 <span class="model-type">Diffusion</span>
                             </div>
                             <div class="model-item model-item-cyan">
-                                <span class="model-name">MDLM-GPT</span>
+                                <span class="model-name">DreamCoder</span>
                                 <span class="model-type">Diffusion</span>
                             </div>
                             <div class="model-item model-item-blue">
-                                <span class="model-name">CodeT5+</span>
-                                <span class="model-type">FIM Baseline</span>
-                            </div>
-                            <div class="model-item model-item-blue">
-                                <span class="model-name">DeepSeek-Coder</span>
+                                <span class="model-name">Qwen-Coder</span>
                                 <span class="model-type">AR Baseline</span>
                             </div>
                             <div class="model-item model-item-blue">
-                                <span class="model-name">StarCoder2</span>
+                                <span class="model-name">CodeLlama</span>
+                                <span class="model-type">AR Baseline</span>
+                            </div>
+                            <div class="model-item model-item-blue">
+                                <span class="model-name">CodeGemma</span>
                                 <span class="model-type">AR Baseline</span>
                             </div>
                         </div>
                     </div>
 
+                    <div class="sidebar-card sidebar-icse" id="sidebar-icse">
+                        <div class="tip-icon">🏆</div>
+                        <h4>ICSE Publication Goal</h4>
+                        <p>Outstanding results from both groups may be combined into a joint submission to <strong>ICSE
+                                2027</strong>. See the Research page for details on this opportunity.</p>
+                        <a href="research.html#icse-goal" class="sidebar-icse-link">Learn more →</a>
+                    </div>
+
                     <div class="sidebar-card sidebar-tip" id="sidebar-tip">
                         <div class="tip-icon">💡</div>
-                        <h4>Pro Tip</h4>
-                        <p>Start by reading the MDLM paper and the RefineID paper to understand both the model
-                            architecture and the evaluation methodology before starting implementation.</p>
+                        <h4>Getting Started</h4>
+                        <p>Begin with the DiffuCoder paper and the RefactorBench benchmark paper to understand the two
+                            pillars of your project before your first meeting.</p>
                     </div>
                 </aside>
             </div>
@@ -300,7 +416,7 @@
                     <div class="timeline-content">
                         <h3>Literature Review Summary</h3>
                         <p>A concise, structured summary of at least 10 relevant papers. Cover dLLMs, code generation,
-                            identifier naming, and SE benchmarks.</p>
+                            refactoring, and SE benchmarks.</p>
                         <div class="timeline-tags">
                             <span class="tag">Week 1–2</span>
                             <span class="tag">Written Report</span>
@@ -310,9 +426,9 @@
                 <div class="timeline-item">
                     <div class="timeline-marker">2</div>
                     <div class="timeline-content">
-                        <h3>Reproduction & Baseline</h3>
-                        <p>Reproduce results from one baseline method (e.g., FIM-based model on the benchmark dataset).
-                            Document setup, findings, and any deviations.</p>
+                        <h3>Baseline Reproduction</h3>
+                        <p>Reproduce at least one AR baseline result on your benchmark. Document the setup, any
+                            deviations, and initial findings.</p>
                         <div class="timeline-tags">
                             <span class="tag">Week 3–4</span>
                             <span class="tag">Code + Log</span>
@@ -322,9 +438,9 @@
                 <div class="timeline-item">
                     <div class="timeline-marker">3</div>
                     <div class="timeline-content">
-                        <h3>Core Implementation</h3>
-                        <p>Implement and run the diffusion-based approach. This includes bad naming detection, masking,
-                            diffusion inference, and result logging.</p>
+                        <h3>dLLM Implementation &amp; Experiments</h3>
+                        <p>Run your dLLM of choice (DiffuCoder or DreamCoder) on the same benchmark. Log all results and
+                            failure modes carefully.</p>
                         <div class="timeline-tags">
                             <span class="tag">Week 5–7</span>
                             <span class="tag">Code + Experiments</span>
@@ -334,9 +450,9 @@
                 <div class="timeline-item">
                     <div class="timeline-marker">4</div>
                     <div class="timeline-content">
-                        <h3>Evaluation & Analysis</h3>
-                        <p>Evaluate your model against baselines using EM, BLEU, and LLM-as-judge. Analyze failure cases
-                            and generate visualizations.</p>
+                        <h3>Evaluation &amp; Analysis</h3>
+                        <p>Evaluate outputs with appropriate metrics. Analyze failure cases qualitatively. Generate all
+                            plots required for the report.</p>
                         <div class="timeline-tags">
                             <span class="tag">Week 8–9</span>
                             <span class="tag">Results + Plots</span>
@@ -346,12 +462,12 @@
                 <div class="timeline-item">
                     <div class="timeline-marker">5</div>
                     <div class="timeline-content">
-                        <h3>Final Report</h3>
-                        <p>Write a full research report in IEEE or ACM format. Include introduction, related work,
-                            methodology, results, discussion, and conclusion.</p>
+                        <h3>Final Report &amp; Presentation</h3>
+                        <p>Write a research report in IEEE two-column format. Present findings to the group. Outstanding
+                            work may be selected for the ICSE joint submission.</p>
                         <div class="timeline-tags">
-                            <span class="tag">Week 10</span>
-                            <span class="tag">PDF Report</span>
+                            <span class="tag">Week 10–11</span>
+                            <span class="tag">PDF + Slides</span>
                         </div>
                     </div>
                 </div>
