@@ -1371,9 +1371,150 @@ img {
 }
 
 .rq-text {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--text-secondary);
   line-height: 1.55;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+/* RQ body wraps text + goal */
+.rq-body {
+  flex: 1;
+}
+
+.rq-goal {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  padding: 6px 10px;
+  border-left: 2px solid rgba(0, 166, 214, 0.2);
+  background: rgba(0, 166, 214, 0.03);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-top: 4px;
+}
+
+.rq-item-blue .rq-goal {
+  border-left-color: rgba(0, 118, 194, 0.25);
+  background: rgba(0, 118, 194, 0.03);
+}
+
+.rq-item-noncore .rq-goal {
+  border-left-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.rq-goal-label {
+  font-weight: 700;
+  color: var(--tudelft-cyan);
+  margin-right: 4px;
+}
+
+.rq-item-blue .rq-goal-label {
+  color: var(--tudelft-royal-blue);
+}
+
+/* Star difficulty badge */
+.rq-stars {
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.rq-stars.core {
+  color: var(--tudelft-cyan);
+}
+
+.rq-stars.noncore {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* Non-core items: dimmed and smaller */
+.rq-item-noncore {
+  background: rgba(255, 255, 255, 0.015) !important;
+  opacity: 0.85;
+}
+
+.rq-item-noncore:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+.rq-num-muted {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: var(--text-muted) !important;
+}
+
+/* Sub-section label within a group */
+.rq-section-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 7px var(--spacing-lg);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.rq-section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.15;
+}
+
+.rq-section-label-cyan {
+  background: rgba(0, 166, 214, 0.06);
+  color: var(--tudelft-cyan);
+}
+
+.rq-section-label-blue {
+  background: rgba(0, 118, 194, 0.06);
+  color: var(--tudelft-royal-blue);
+}
+
+.rq-section-label-muted {
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-muted);
+}
+
+/* Legend strip above the groups */
+.rq-legend {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: center;
+  margin: var(--spacing-md) 0 var(--spacing-lg);
+  padding: 8px var(--spacing-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  flex-wrap: wrap;
+}
+
+.rq-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.rq-star {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.rq-star.core {
+  color: var(--tudelft-cyan);
+}
+
+.rq-star.noncore {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* ICSE sidebar card */

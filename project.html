@@ -157,85 +157,190 @@
                     <!-- Two Student Groups -->
                     <div class="content-block">
                         <h2>Student Groups &amp; Research Questions</h2>
-                        <p>The cohort is divided into two groups. Each group explores a different refactoring domain
-                            while sharing the common dLLM-vs-AR experimental framework. Group titles and final research
-                            questions will be confirmed after the kick-off session.</p>
+                        <p>The cohort is divided into two groups, each tackling a distinct angle of the
+                            dLLM-for-refactoring hypothesis. Core RQs form the backbone of the paper narrative; Non-Core
+                            RQs add empirical depth and visualisation richness.</p>
+                        <div class="rq-legend">
+                            <span class="rq-legend-item"><span class="rq-star core">★★★</span> Core RQ — thesis
+                                backbone</span>
+                            <span class="rq-legend-item"><span class="rq-star noncore">★★</span> Non-Core RQ —
+                                supplementary analysis</span>
+                        </div>
 
-                        <!-- Group A -->
+                        <!-- ── GROUP A ── -->
                         <div class="student-group" id="group-a">
                             <div class="group-header group-header-cyan">
                                 <div class="group-badge">Group A</div>
                                 <div class="group-title-area">
-                                    <h3>[Placeholder: Structural Refactoring with dLLMs]</h3>
-                                    <p>Focusing on macro-level code transformations such as method extraction, class
-                                        restructuring, and design pattern application.</p>
+                                    <h3>Prompt Sensitivity — Robustness of dLLMs vs. AR Models</h3>
+                                    <p><em>Project Pitch:</em> Minor prompt variations often cause severe output
+                                        fluctuations in AR models during code refactoring tasks. This project
+                                        empirically tests, for the first time, whether dLLMs — thanks to their
+                                        bidirectional attention mechanism — exhibit significantly superior robustness
+                                        under semantically equivalent prompt perturbations.</p>
                                 </div>
                             </div>
+
+                            <div class="rq-section-label rq-section-label-cyan">Core Research Questions</div>
                             <div class="rq-list">
                                 <div class="rq-item" id="rq-a1">
                                     <div class="rq-num">RQ A1</div>
-                                    <div class="rq-text">[Placeholder] To what extent can DiffuCoder perform
-                                        method-extraction refactoring compared to Qwen-Coder on Java corpora?</div>
+                                    <div class="rq-stars core">★★★</div>
+                                    <div class="rq-body">
+                                        <div class="rq-text">How robust are dLLMs compared to AR models when subjected
+                                            to semantic-preserving prompt perturbations in code refactoring?</div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Establish the
+                                            baseline comparison. Using a systematic Perturbation Taxonomy (synonym
+                                            substitution, noise injection, etc.), compute and compare output consistency
+                                            (Exact Match / Semantic Match across perturbations) between dLLMs and AR
+                                            models.</div>
+                                    </div>
                                 </div>
                                 <div class="rq-item" id="rq-a2">
                                     <div class="rq-num">RQ A2</div>
-                                    <div class="rq-text">[Placeholder] How does bidirectional diffusion generation
-                                        affect the correctness of class decomposition refactoring?</div>
+                                    <div class="rq-stars core">★★★</div>
+                                    <div class="rq-body">
+                                        <div class="rq-text">To what extent do context ordering perturbations expose the
+                                            structural differences between bidirectional dLLMs and unidirectional AR
+                                            models?</div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Validate the
+                                            theoretical hypothesis. Target "context ordering" perturbations specifically
+                                            (e.g., smell description placed before vs. after the code), demonstrating
+                                            that left-to-right AR generation is highly sensitive to position while dLLMs
+                                            leverage global context to resist such shifts.</div>
+                                    </div>
                                 </div>
                                 <div class="rq-item" id="rq-a3">
                                     <div class="rq-num">RQ A3</div>
-                                    <div class="rq-text">[Placeholder] Can dLLMs automatically identify and apply design
-                                        patterns (e.g., Strategy, Factory) more reliably than AR models?</div>
+                                    <div class="rq-stars core">★★★</div>
+                                    <div class="rq-body">
+                                        <div class="rq-text">What is the correlation between prompt robustness and
+                                            refactoring correctness in dLLMs versus AR models?</div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Prove "stable and
+                                            correct". A model that consistently produces the same wrong output offers no
+                                            practical value. This RQ combines consistency (output stability) with fix
+                                            rate (refactoring success), and presents a quality–stability scatter plot to
+                                            reveal the trade-off.</div>
+                                    </div>
                                 </div>
-                                <div class="rq-item" id="rq-a4">
-                                    <div class="rq-num">RQ A4</div>
-                                    <div class="rq-text">[Placeholder] What is the effect of context window size on
-                                        DreamCoder's ability to perform long-range structural refactoring?</div>
+                            </div>
+
+                            <div class="rq-section-label rq-section-label-muted">Non-Core Research Questions</div>
+                            <div class="rq-list">
+                                <div class="rq-item rq-item-noncore" id="rq-a4">
+                                    <div class="rq-num rq-num-muted">RQ A4</div>
+                                    <div class="rq-stars noncore">★★</div>
+                                    <div class="rq-body">
+                                        <div class="rq-text">How does specification granularity affect generation
+                                            entropy and token distribution in dLLMs?</div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Produce rich
+                                            visualisations. Extract model generation confidence (entropy) under prompts
+                                            of varying granularity ("fix line 5" vs. "fix all bad names") and generate
+                                            token-probability heat maps that visualise how dLLM attention shifts with
+                                            instruction specificity.</div>
+                                    </div>
                                 </div>
-                                <div class="rq-item" id="rq-a5">
-                                    <div class="rq-num">RQ A5</div>
-                                    <div class="rq-text">[Placeholder] How do dLLMs compare to CodeLlama on the task of
-                                        inline variable and parameter refactoring in Python?</div>
+                                <div class="rq-item rq-item-noncore" id="rq-a5">
+                                    <div class="rq-num rq-num-muted">RQ A5</div>
+                                    <div class="rq-stars noncore">★★</div>
+                                    <div class="rq-body">
+                                        <div class="rq-text">How do model scale and underlying architecture influence
+                                            the prompt sensitivity of dLLMs?</div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Demonstrate
+                                            generalisability. Introduce models of different sizes or families (e.g.,
+                                            LLaDA-8B vs. Dream-7B; multiple Qwen2.5-Coder scales) and produce
+                                            scaling-law-style line charts showing that the robustness findings are not
+                                            artefacts of a single model.</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Group B -->
+                        <!-- ── GROUP B ── -->
                         <div class="student-group" id="group-b">
                             <div class="group-header group-header-blue">
                                 <div class="group-badge group-badge-blue">Group B</div>
                                 <div class="group-title-area">
-                                    <h3>[Placeholder: Code Quality &amp; Smell Removal with dLLMs]</h3>
-                                    <p>Focusing on micro-level code quality improvements such as removing code smells,
-                                        improving readability, and reducing complexity.</p>
+                                    <h3>Overrefactoring — Can dLLM Masking Suppress Over-modification?</h3>
+                                    <p><em>Project Pitch:</em> Overrefactoring is a critical failure mode of LLMs in
+                                        software engineering — it can silently introduce "ghost bugs". This project
+                                        investigates whether dLLMs' precise masking mechanism can constrain the
+                                        modification scope to targeted regions, acting as a surgical tool that
+                                        suppresses overrefactoring while preserving refactoring effectiveness.</p>
                                 </div>
                             </div>
+
+                            <div class="rq-section-label rq-section-label-blue">Core Research Questions</div>
                             <div class="rq-list">
                                 <div class="rq-item rq-item-blue" id="rq-b1">
                                     <div class="rq-num rq-num-blue">RQ B1</div>
-                                    <div class="rq-text">[Placeholder] To what extent can DiffuCoder automatically
-                                        detect and remove God Class code smells compared to CodeGemma?</div>
+                                    <div class="rq-stars core">★★★</div>
+                                    <div class="rq-body">
+                                        <div class="rq-text">Do dLLMs inherently reduce the overrefactoring rate
+                                            compared to AR models under default settings?</div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Establish that the
+                                            phenomenon exists. Under full-mask settings (analogous to AR generation),
+                                            compare the rate at which dLLMs and AR models modify tokens outside the
+                                            target smell region (overrefactoring rate).</div>
+                                    </div>
                                 </div>
                                 <div class="rq-item rq-item-blue" id="rq-b2">
                                     <div class="rq-num rq-num-blue">RQ B2</div>
-                                    <div class="rq-text">[Placeholder] How effectively do dLLMs reduce cyclomatic
-                                        complexity in real-world Java methods when compared to autoregressive baselines?
+                                    <div class="rq-stars core">★★★</div>
+                                    <div class="rq-body">
+                                        <div class="rq-text">How does the granularity of the masked region impact the
+                                            trade-off between overrefactoring suppression and refactoring success rate?
+                                        </div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Find the "sweet
+                                            spot". Core experiment! Test Token-level, Statement-level, and
+                                            Function-level mask granularities, and plot the Pareto front curve to
+                                            explore whether tighter constraints strip the model of the contextual
+                                            information needed for correct refactoring.</div>
                                     </div>
                                 </div>
                                 <div class="rq-item rq-item-blue" id="rq-b3">
                                     <div class="rq-num rq-num-blue">RQ B3</div>
-                                    <div class="rq-text">[Placeholder] Can DiffuCoder improve readability metrics (e.g.,
-                                        Halstead difficulty) without introducing functional regressions?</div>
+                                    <div class="rq-stars core">★★★</div>
+                                    <div class="rq-body">
+                                        <div class="rq-text">To what extent does precise masking in dLLMs preserve the
+                                            functional integrity of non-target code regions?</div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Penetrate to code
+                                            semantics. Beyond counting token diffs, use Tree-sitter AST diffing to
+                                            quantitatively measure how many control-flow or structural changes AR models
+                                            vs. different-granularity dLLMs introduce in untargeted code regions — fewer
+                                            is safer.</div>
+                                    </div>
                                 </div>
-                                <div class="rq-item rq-item-blue" id="rq-b4">
-                                    <div class="rq-num rq-num-blue">RQ B4</div>
-                                    <div class="rq-text">[Placeholder] How do diffusion-generated refactorings compare
-                                        to developer-accepted refactorings in terms of human evaluation scores?</div>
+                            </div>
+
+                            <div class="rq-section-label rq-section-label-muted">Non-Core Research Questions</div>
+                            <div class="rq-list">
+                                <div class="rq-item rq-item-noncore" id="rq-b4">
+                                    <div class="rq-num rq-num-muted">RQ B4</div>
+                                    <div class="rq-stars noncore">★★</div>
+                                    <div class="rq-body">
+                                        <div class="rq-text">How does the effectiveness of masking granularity vary
+                                            across different categories of code smells?</div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Refine the
+                                            analysis dimension. Break down the dataset by smell type (e.g., Variable
+                                            Rename, Extract Method, Magic Number) and compute RQ B2 metrics per
+                                            category. Enables dense stacked bar charts or radar diagrams that
+                                            demonstrate a thorough empirical evaluation.</div>
+                                    </div>
                                 </div>
-                                <div class="rq-item rq-item-blue" id="rq-b5">
-                                    <div class="rq-num rq-num-blue">RQ B5</div>
-                                    <div class="rq-text">[Placeholder] What is the impact of diffusion step count on
-                                        refactoring quality and semantic equivalence preservation?</div>
+                                <div class="rq-item rq-item-noncore" id="rq-b5">
+                                    <div class="rq-num rq-num-muted">RQ B5</div>
+                                    <div class="rq-stars noncore">★★</div>
+                                    <div class="rq-body">
+                                        <div class="rq-text">What is the computational overhead associated with
+                                            fine-grained mask construction and denoising in dLLMs during inference?
+                                        </div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Add a systems
+                                            perspective. Measure preprocessing time, inference latency, and memory
+                                            footprint for each mask granularity. Produce overhead-vs-precision charts
+                                            that demonstrate system-level awareness alongside algorithmic insights.
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
