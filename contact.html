@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact & Support – ML4SE | TU Delft</title>
+    <meta name="description"
+        content="Contact information for the ML4SE course TA at TU Delft. Office hours, Discord community, and support channels." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <div class="nav-logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <polygon points="16,2 30,28 2,28" fill="#00A6D6" />
+                        <polygon points="16,10 24,28 8,28" fill="#0C2340" />
+                    </svg>
+                </div>
+                <div class="nav-brand-text">
+                    <span class="nav-title">ML4SE</span>
+                    <span class="nav-subtitle">TU Delft</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+                <li><a href="project.html" class="nav-link" id="nav-project">Project</a></li>
+                <li><a href="research.html" class="nav-link" id="nav-research">Research</a></li>
+                <li><a href="requirements.html" class="nav-link" id="nav-requirements">Requirements</a></li>
+                <li><a href="contact.html" class="nav-link active" id="nav-contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero page-hero-contact">
+        <div class="page-hero-bg">
+            <div class="hero-glow hero-glow-1"></div>
+        </div>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Contact</span>
+            </div>
+            <div class="page-hero-content">
+                <div class="page-hero-tag">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    </svg>
+                    Contact &amp; Support
+                </div>
+                <h1>Get in Touch<br /><span class="accent">We're Here to Help</span></h1>
+                <p>Have questions about the project, research questions, or technical setup? Reach out through any of
+                    the channels below. Discord is the fastest way to get a response from both the TA and your peers.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-layout">
+
+                <!-- Left: TA Card + Discord -->
+                <div class="contact-main">
+
+                    <!-- TA Profile Card -->
+                    <div class="ta-card" id="ta-card">
+                        <div class="ta-card-inner">
+                            <div class="ta-avatar" id="ta-avatar">
+                                <span class="ta-avatar-initials">YH</span>
+                                <div class="ta-avatar-ring"></div>
+                            </div>
+                            <div class="ta-info">
+                                <div class="ta-role-badge">Teaching Assistant</div>
+                                <h2 class="ta-name">Yongcheng Huang</h2>
+                                <a href="mailto:Y.Huang-5@student.tudelft.nl" class="ta-email" id="ta-email">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                        <polyline points="22,6 12,13 2,6" />
+                                    </svg>
+                                    Y.Huang-5@student.tudelft.nl
+                                </a>
+                                <p class="ta-bio">PhD researcher in the Software Engineering Research Group (SERG) at TU
+                                    Delft, specialising in language models for software engineering. Yongcheng is your
+                                    primary point of contact for all project-related questions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Office Hours Block -->
+                    <div class="office-hours-card" id="office-hours">
+                        <div class="oh-header">
+                            <div class="oh-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>TA Office Hours</h3>
+                                <p class="oh-subtitle">Focused Q&amp;A session — come prepared with specific questions
+                                </p>
+                            </div>
+                        </div>
+                        <div class="oh-details">
+                            <div class="oh-detail-item" id="oh-day">
+                                <div class="oh-detail-icon">📅</div>
+                                <div class="oh-detail-body">
+                                    <strong>When</strong>
+                                    <span>Every Thursday Morning</span>
+                                </div>
+                            </div>
+                            <div class="oh-detail-item" id="oh-time">
+                                <div class="oh-detail-icon">🕘</div>
+                                <div class="oh-detail-body">
+                                    <strong>Time</strong>
+                                    <span>08:45 – 12:45</span>
+                                </div>
+                            </div>
+                            <div class="oh-detail-item" id="oh-location">
+                                <div class="oh-detail-icon">📍</div>
+                                <div class="oh-detail-body">
+                                    <strong>Location</strong>
+                                    <span class="oh-tbd">TBD — check Discord for updates</span>
+                                </div>
+                            </div>
+                            <div class="oh-detail-item" id="oh-format">
+                                <div class="oh-detail-icon">💬</div>
+                                <div class="oh-detail-body">
+                                    <strong>Format</strong>
+                                    <span>Drop-in (no appointment needed during hours)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="oh-note">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="12" y1="8" x2="12" y2="12" />
+                                <line x1="12" y1="16" x2="12.01" y2="16" />
+                            </svg>
+                            Outside office hours, please use the <strong>Discord server</strong> or email. Response time
+                            via email is within 2 business days.
+                        </div>
+                    </div>
+
+                    <!-- Response Expectations -->
+                    <div class="content-block" id="response-policy">
+                        <h2>Communication Guidelines</h2>
+                        <div class="comm-grid">
+                            <div class="comm-item" id="comm-discord">
+                                <div class="comm-item-header">
+                                    <div class="comm-icon comm-icon-discord">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z" />
+                                        </svg>
+                                    </div>
+                                    <h4>Discord</h4>
+                                </div>
+                                <p>Fastest response — typically within a few hours. Use <strong>#questions</strong> for
+                                    project-related queries so everyone benefits from the answer.</p>
+                                <div class="comm-response-time">
+                                    <span class="response-dot response-dot-green"></span> Usually &lt; 4 hours
+                                </div>
+                            </div>
+                            <div class="comm-item" id="comm-email">
+                                <div class="comm-item-header">
+                                    <div class="comm-icon comm-icon-email">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                            <polyline points="22,6 12,13 2,6" />
+                                        </svg>
+                                    </div>
+                                    <h4>Email</h4>
+                                </div>
+                                <p>For formal or confidential matters (e.g., personal circumstances, grading queries).
+                                    Please include your student number and project group in the subject line.</p>
+                                <div class="comm-response-time">
+                                    <span class="response-dot response-dot-yellow"></span> Within 2 business days
+                                </div>
+                            </div>
+                            <div class="comm-item" id="comm-officehours">
+                                <div class="comm-item-header">
+                                    <div class="comm-icon comm-icon-office">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                            <line x1="16" y1="2" x2="16" y2="6" />
+                                            <line x1="8" y1="2" x2="8" y2="6" />
+                                            <line x1="3" y1="10" x2="21" y2="10" />
+                                        </svg>
+                                    </div>
+                                    <h4>Office Hours</h4>
+                                </div>
+                                <p>Best for in-depth technical discussions, debugging sessions, or whiteboard-style
+                                    design reviews. No appointment needed; simply show up on Thursday morning.</p>
+                                <div class="comm-response-time">
+                                    <span class="response-dot response-dot-cyan"></span> Real-time · Thu 08:45–12:45
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right: Discord QR + Sidebar info -->
+                <aside class="contact-sidebar">
+
+                    <!-- Discord QR -->
+                    <div class="discord-card" id="discord-card">
+                        <div class="discord-card-header">
+                            <div class="discord-logo-wrap">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="#5865F2">
+                                    <path
+                                        d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Join the Discord</h4>
+                                <p>ML4SE 2025–2026</p>
+                            </div>
+                        </div>
+                        <div class="discord-qr-wrap">
+                            <img src="discord_qr.png" alt="Discord server QR code — scan to join the ML4SE community"
+                                class="discord-qr-img" id="discord-qr" />
+                        </div>
+                        <p class="discord-qr-caption">Scan with your phone camera to join instantly</p>
+                        <div class="discord-channels">
+                            <div class="dc-channel" id="dc-announcements">
+                                <span class="dc-hash">#</span>announcements
+                                <span class="dc-desc">Important updates from the TA</span>
+                            </div>
+                            <div class="dc-channel" id="dc-questions">
+                                <span class="dc-hash">#</span>questions
+                                <span class="dc-desc">Project &amp; technical Q&amp;A</span>
+                            </div>
+                            <div class="dc-channel" id="dc-groupa">
+                                <span class="dc-hash">#</span>group-a-prompt-sensitivity
+                                <span class="dc-desc">Group A discussion</span>
+                            </div>
+                            <div class="dc-channel" id="dc-groupb">
+                                <span class="dc-hash">#</span>group-b-overrefactoring
+                                <span class="dc-desc">Group B discussion</span>
+                            </div>
+                            <div class="dc-channel" id="dc-papers">
+                                <span class="dc-hash">#</span>paper-sharing
+                                <span class="dc-desc">Share relevant papers &amp; resources</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick tips -->
+                    <div class="sidebar-card sidebar-tip" id="contact-tip">
+                        <div class="tip-icon">💡</div>
+                        <h4>Before You Ask</h4>
+                        <p>Before posting a question, please check: (1) the <strong>Brightspace</strong> announcements,
+                            (2) the <strong>#announcements</strong> Discord channel, and (3) whether someone has already
+                            asked the same question in <strong>#questions</strong>. This keeps the channels efficient
+                            for everyone.</p>
+                    </div>
+
+                    <div class="sidebar-card" id="brightspace-card">
+                        <h4>Brightspace</h4>
+                        <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom: var(--spacing-md);">
+                            Official course materials, grade submissions, and announcements are managed through
+                            Brightspace. Contact the TA via Brightspace messaging for formal matters.</p>
+                        <a href="https://brightspace.tudelft.nl" target="_blank" rel="noopener"
+                            class="btn btn-secondary" style="display:inline-flex; font-size:0.85rem; padding: 8px 16px;"
+                            id="brightspace-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            Open Brightspace
+                        </a>
+                    </div>
+
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                            <polygon points="16,2 30,28 2,28" fill="#00A6D6" />
+                            <polygon points="16,10 24,28 8,28" fill="#0C2340" />
+                        </svg>
+                        <span>ML4SE</span>
+                    </div>
+                    <p>Machine Learning for Software Engineering<br />TU Delft · EEMCS Faculty</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Course Pages</h4>
+                    <ul>
+                        <li><a href="project.html">Project Information</a></li>
+                        <li><a href="research.html">Existing Research</a></li>
+                        <li><a href="requirements.html">Student Requirements</a></li>
+                        <li><a href="contact.html">Contact &amp; Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>External Links</h4>
+                    <ul>
+                        <li><a href="https://www.tudelft.nl" target="_blank" rel="noopener">TU Delft</a></li>
+                        <li><a href="https://brightspace.tudelft.nl" target="_blank" rel="noopener">Brightspace</a></li>
+                        <li><a href="https://arxiv.org" target="_blank" rel="noopener">arXiv</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025–2026 ML4SE · TU Delft · Software Engineering Research Group</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

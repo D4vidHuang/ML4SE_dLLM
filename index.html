@@ -29,7 +29,7 @@
                 </div>
                 <div class="nav-brand-text">
                     <span class="nav-title">ML4SE</span>
-                    <span class="nav-subtitle">TU Delft</span>
+                    <span class="nav-subtitle">dLLM for Code</span>
                 </div>
             </a>
             <ul class="nav-links">
@@ -37,6 +37,7 @@
                 <li><a href="project.html" class="nav-link" id="nav-project">Project</a></li>
                 <li><a href="research.html" class="nav-link" id="nav-research">Research</a></li>
                 <li><a href="requirements.html" class="nav-link" id="nav-requirements">Requirements</a></li>
+                <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span><span></span><span></span>
@@ -62,9 +63,9 @@
                     <span class="hero-title-accent">for Software Engineering</span>
                 </h1>
                 <p class="hero-desc">
-                    Welcome to <strong>ML4SE</strong> at TU Delft. This course explores the intersection of
-                    machine learning techniques and software engineering challenges — with a focus on
-                    applying <strong>Diffusion Language Models</strong> to Automatic Code Refactoring.
+                    Welcome to <strong>ML4SE</strong> at TU Delft. I am your TA, Yongcheng Huang. This course explores
+                    the intersection of machine learning techniques and software engineering challenges, and my research
+                    focus is on applying <strong>Diffusion Language Models</strong> to Automatic Code Refactoring.
                 </p>
                 <div class="hero-actions">
                     <a href="project.html" class="btn btn-primary" id="hero-project-btn">
@@ -91,7 +92,7 @@
                         <span class="dot red"></span>
                         <span class="dot yellow"></span>
                         <span class="dot green"></span>
-                        <span class="code-title">ml4se_refactor.py</span>
+                        <span class="code-title">ml4se_dLLM.py</span>
                     </div>
                     <pre class="code-body"><span class="kw">from</span> diffucoder <span class="kw">import</span> DiffuCoder
 <span class="kw">import</span> torch
@@ -99,7 +100,7 @@
 <span class="comment"># dLLM-based code refactoring</span>
 <span class="kw">class</span> <span class="cls">AutoRefactorer</span>:
     <span class="kw">def</span> <span class="fn">__init__</span>(self):
-        self.model = <span class="cls">DiffuCoder</span>(<span class="str">"7B"</span>)
+        self.model = <span class="cls">DiffuCoder</span>
         self.task = <span class="str">"code_refactoring"</span>
 
     <span class="kw">def</span> <span class="fn">refactor</span>(self, code_ctx):
@@ -176,7 +177,7 @@
                         </svg>
                     </div>
                     <div class="card-content">
-                        <h3>Student Requirements</h3>
+                        <h3>Student Expectations</h3>
                         <p>Review what's expected of you: deliverables, deadlines, evaluation criteria, and academic
                             integrity.</p>
                     </div>
@@ -227,7 +228,7 @@
                     <div class="section-tag">About the Course</div>
                     <h2>Why ML4SE?</h2>
                     <p>Software engineering is increasingly empowered by AI. This course bridges the gap between modern
-                        machine learning — particularly large language models and diffusion-based approaches — and
+                        machine learning, particularly large language models and diffusion-based approaches, and
                         real-world software engineering tasks.</p>
                     <p>Students work on cutting-edge research problems, gaining hands-on experience with
                         state-of-the-art methods and contributing original insights to the field.</p>
@@ -309,7 +310,7 @@
                         </svg>
                         <span>ML4SE</span>
                     </div>
-                    <p>Machine Learning for Software Engineering<br />TU Delft · EEMCS Faculty</p>
+                    <p>Machine Learning for Software Engineering<br />TU Delft · AISE lab</p>
                 </div>
                 <div class="footer-links">
                     <h4>Course Pages</h4>
@@ -329,7 +330,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025–2026 ML4SE · TU Delft · Software Engineering Research Group</p>
+                <p>© 2025–2026 ML4SE · TU Delft · Lecture by Dr. Maliheh Izadi</p>
             </div>
         </div>
     </footer>
