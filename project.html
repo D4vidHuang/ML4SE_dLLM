@@ -215,32 +215,35 @@
                                     <h3>Tool for refactoring mining, How early can we get it?</h3>
                                     <p><em>Project Pitch:</em> Through repository mining, we aim to uncover the
                                         underlying reasons and triggers that prompt human developers to perform code
-                                        refactoring. Since modern AI tools, particularly dLLMs, can assist in code
-                                        refactoring and dramatically reduce the time required, understanding these
-                                        triggers allows us to automatically activate the refactoring process and let AI
-                                        handle the modifications.</p>
+                                        refactoring. The ultimate goal is to understand what causes a refactoring and
+                                        investigate how much earlier in the software development lifecycle it could have
+                                        actually been done. The focus here is on the data generation
+                                        procedure—identifying precisely when technical debt accumulates to a tipping
+                                        point—which will later serve as the foundation for powerful AI-driven automatic
+                                        refactoring tools.</p>
                                 </div>
                             </div>
                             <div class="rq-list">
                                 <div class="rq-item rq-item-blue" id="rq-b1">
                                     <div class="rq-body">
-                                        <div class="rq-text">What are the primary triggers and patterns in code
-                                            evolution that prompt human developers to initiate refactoring in real-world
-                                            repositories?</div>
+                                        <div class="rq-text">What are the primary triggers and evolutionary patterns in
+                                            codebases that cause human developers to initiate a refactoring process?
+                                        </div>
                                         <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Mine commit
-                                            histories to identify the specific codebase conditions, such as accumulated
-                                            technical debt or code smell thresholds, that historically lead to manual
+                                            histories to identify the specific codebase conditions (e.g., code smell
+                                            thresholds or structural complexity jumps) that historically lead to manual
                                             refactoring.</div>
                                     </div>
                                 </div>
                                 <div class="rq-item rq-item-blue" id="rq-b2">
                                     <div class="rq-body">
-                                        <div class="rq-text">How can we model human refactoring triggers to create an
-                                            automated threshold that proactively activates dLLM-based refactoring?</div>
-                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Develop an
-                                            automated pipeline that monitors code changes and successfully predicts when
-                                            a refactoring intervention is needed, triggering an AI model to perform the
-                                            restructuring.</div>
+                                        <div class="rq-text">Based on historical repository data, how much earlier could
+                                            a refactoring task have been performed before a human developer actually
+                                            addressed it?</div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> By tracing back
+                                            the history of refactored files, establish the timeline of technical debt
+                                            accumulation and quantify the delay between when a refactoring was
+                                            theoretically needed versus when it was executed.</div>
                                     </div>
                                 </div>
                             </div>
