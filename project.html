@@ -213,175 +213,195 @@
                                 <div class="group-badge group-badge-blue">Group B</div>
                                 <div class="group-title-area">
                                     <h3>Tool for refactoring mining, How early can we get it?</h3>
-                                    <p><em>Project Pitch:</em> Code refactoring is fundamentally based on technical
-                                        debt, which is hard for humans to resolve and sometimes unnecessary for people
-                                        to address manually. These days, we have powerful AI tools that can help us
-                                        shrink the time a lot for the refactoring process. Therefore, doing GitHub repo
-                                        mining for finding out the actual time saved and needed for Automatic Code
-                                        Refactoring with such tools will be important.</p>
+                                    <p><em>Project Pitch:</em> Through repository mining, we aim to uncover the
+                                        underlying reasons and triggers that prompt human developers to perform code
+                                        refactoring. Since modern AI tools, particularly dLLMs, can assist in code
+                                        refactoring and dramatically reduce the time required, understanding these
+                                        triggers allows us to automatically activate the refactoring process and let AI
+                                        handle the modifications.</p>
+                                </div>
+                            </div>
+                            <div class="rq-list">
+                                <div class="rq-item rq-item-blue" id="rq-b1">
+                                    <div class="rq-body">
+                                        <div class="rq-text">What are the primary triggers and patterns in code
+                                            evolution that prompt human developers to initiate refactoring in real-world
+                                            repositories?</div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Mine commit
+                                            histories to identify the specific codebase conditions, such as accumulated
+                                            technical debt or code smell thresholds, that historically lead to manual
+                                            refactoring.</div>
+                                    </div>
+                                </div>
+                                <div class="rq-item rq-item-blue" id="rq-b2">
+                                    <div class="rq-body">
+                                        <div class="rq-text">How can we model human refactoring triggers to create an
+                                            automated threshold that proactively activates dLLM-based refactoring?</div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Develop an
+                                            automated pipeline that monitors code changes and successfully predicts when
+                                            a refactoring intervention is needed, triggering an AI model to perform the
+                                            restructuring.</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Methodology -->
-                    <div class="content-block">
-                        <h2>General Methodology</h2>
-                        <div class="method-steps">
-                            <div class="method-step" id="step-1">
-                                <div class="method-step-header">
-                                    <div class="method-icon">
-                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path
-                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                                        </svg>
-                                    </div>
-                                    <h3>1. Benchmark Construction</h3>
-                                </div>
-                                <p>Identify and prepare a dataset of before/after refactoring pairs from real-world
-                                    developer commits. Align it to your specific research question (structural or
-                                    quality refactoring).</p>
-                            </div>
-                            <div class="method-step" id="step-2">
-                                <div class="method-step-header">
-                                    <div class="method-icon">
-                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="3" y="3" width="18" height="18" rx="2" />
-                                            <path d="M3 9h18M9 21V9" />
-                                        </svg>
-                                    </div>
-                                    <h3>2. Context Extraction &amp; Prompting</h3>
-                                </div>
-                                <p>Extract sufficient code context. For dLLMs, use masking strategies targeting the
-                                    region to be refactored. For AR baselines, design appropriate instruction or FIM
-                                    prompts.</p>
-                            </div>
-                            <div class="method-step" id="step-3">
-                                <div class="method-step-header">
-                                    <div class="method-icon">
-                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <path d="M12 8v4l3 3" />
-                                        </svg>
-                                    </div>
-                                    <h3>3. Model Inference</h3>
-                                </div>
-                                <p>Run your selected dLLM and AR models on the benchmark. Log all outputs, runtimes, and
-                                    any failure cases (OOM, invalid output, etc.).</p>
-                            </div>
-                            <div class="method-step" id="step-4">
-                                <div class="method-step-header">
-                                    <div class="method-icon">
-                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-                                        </svg>
-                                    </div>
-                                    <h3>4. Evaluation</h3>
-                                </div>
-                                <p>Evaluate using metric(s) appropriate to your RQ: CodeBLEU, exact match, test-suite
-                                    pass rate, static analysis scores, or LLM-as-judge. Discuss quantitative and
-                                    qualitative results.</p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+            </div>
 
-                <!-- Sidebar -->
-                <aside class="overview-sidebar">
-                    <div class="sidebar-card" id="sidebar-quickfacts">
-                        <h4>Quick Facts</h4>
-                        <ul class="sidebar-list">
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
+            <!-- Methodology -->
+            <div class="content-block">
+                <h2>General Methodology</h2>
+                <div class="method-steps">
+                    <div class="method-step" id="step-1">
+                        <div class="method-step-header">
+                            <div class="method-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
-                                    <polyline points="20 6 9 17 4 12" />
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                                 </svg>
-                                <span>Task: <strong>Code Refactoring</strong></span>
-                            </li>
-                            <!-- <li>
+                            </div>
+                            <h3>1. Benchmark Construction</h3>
+                        </div>
+                        <p>Identify and prepare a dataset of before/after refactoring pairs from real-world
+                            developer commits. Align it to your specific research question (structural or
+                            quality refactoring).</p>
+                    </div>
+                    <div class="method-step" id="step-2">
+                        <div class="method-step-header">
+                            <div class="method-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                                    <path d="M3 9h18M9 21V9" />
+                                </svg>
+                            </div>
+                            <h3>2. Context Extraction &amp; Prompting</h3>
+                        </div>
+                        <p>Extract sufficient code context. For dLLMs, use masking strategies targeting the
+                            region to be refactored. For AR baselines, design appropriate instruction or FIM
+                            prompts.</p>
+                    </div>
+                    <div class="method-step" id="step-3">
+                        <div class="method-step-header">
+                            <div class="method-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 8v4l3 3" />
+                                </svg>
+                            </div>
+                            <h3>3. Model Inference</h3>
+                        </div>
+                        <p>Run your selected dLLM and AR models on the benchmark. Log all outputs, runtimes, and
+                            any failure cases (OOM, invalid output, etc.).</p>
+                    </div>
+                    <div class="method-step" id="step-4">
+                        <div class="method-step-header">
+                            <div class="method-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                                </svg>
+                            </div>
+                            <h3>4. Evaluation</h3>
+                        </div>
+                        <p>Evaluate using metric(s) appropriate to your RQ: CodeBLEU, exact match, test-suite
+                            pass rate, static analysis scores, or LLM-as-judge. Discuss quantitative and
+                            qualitative results.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="overview-sidebar">
+            <div class="sidebar-card" id="sidebar-quickfacts">
+                <h4>Quick Facts</h4>
+                <ul class="sidebar-list">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        <span>Task: <strong>Code Refactoring</strong></span>
+                    </li>
+                    <!-- <li>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
                                     stroke-width="2">
                                     <polyline points="20 6 9 17 4 12" />
                                 </svg>
                                 <span>Primary model: <strong>DiffuCoder</strong></span>
                             </li> -->
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
-                                    stroke-width="2">
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                <span>Model type: <strong>Diffusion LLM</strong></span>
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
-                                    stroke-width="2">
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                <span>Groups: <strong>A &amp; B (5 students each)</strong></span>
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
-                                    stroke-width="2">
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                <span>Domain: <strong>SE</strong></span>
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6"
-                                    stroke-width="2">
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                <span>Target: <strong>ICSE 2027</strong></span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="sidebar-card" id="sidebar-models">
-                        <h4>Models at a Glance</h4>
-                        <div class="model-list">
-                            <div class="model-item model-item-cyan">
-                                <span class="model-name">DiffuCoder</span>
-                                <span class="model-type">Diffusion</span>
-                            </div>
-                            <div class="model-item model-item-cyan">
-                                <span class="model-name">DreamCoder</span>
-                                <span class="model-type">Diffusion</span>
-                            </div>
-                            <div class="model-item model-item-blue">
-                                <span class="model-name">Qwen-Coder</span>
-                                <span class="model-type">AR Baseline</span>
-                            </div>
-                            <div class="model-item model-item-blue">
-                                <span class="model-name">CodeLlama</span>
-                                <span class="model-type">AR Baseline</span>
-                            </div>
-                            <div class="model-item model-item-blue">
-                                <span class="model-name">CodeGemma</span>
-                                <span class="model-type">AR Baseline</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sidebar-card sidebar-icse" id="sidebar-icse">
-                        <div class="tip-icon">🏆</div>
-                        <h4>ICSE Publication Goal</h4>
-                        <p>Outstanding results from both groups may be combined into a joint submission to <strong>ICSE
-                                2027</strong>. See the Research page for details on this opportunity.</p>
-                        <a href="research.html#icse-goal" class="sidebar-icse-link">Learn more →</a>
-                    </div>
-
-                    <div class="sidebar-card sidebar-tip" id="sidebar-tip">
-                        <div class="tip-icon">💡</div>
-                        <h4>Getting Started</h4>
-                        <p>Begin with the LLaDA-8B paper to understand your project before your first meeting.</p>
-                    </div>
-                </aside>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        <span>Model type: <strong>Diffusion LLM</strong></span>
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        <span>Groups: <strong>A &amp; B (5 students each)</strong></span>
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        <span>Domain: <strong>SE</strong></span>
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A6D6" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        <span>Target: <strong>ICSE 2027</strong></span>
+                    </li>
+                </ul>
             </div>
+
+            <div class="sidebar-card" id="sidebar-models">
+                <h4>Models at a Glance</h4>
+                <div class="model-list">
+                    <div class="model-item model-item-cyan">
+                        <span class="model-name">DiffuCoder</span>
+                        <span class="model-type">Diffusion</span>
+                    </div>
+                    <div class="model-item model-item-cyan">
+                        <span class="model-name">DreamCoder</span>
+                        <span class="model-type">Diffusion</span>
+                    </div>
+                    <div class="model-item model-item-blue">
+                        <span class="model-name">Qwen-Coder</span>
+                        <span class="model-type">AR Baseline</span>
+                    </div>
+                    <div class="model-item model-item-blue">
+                        <span class="model-name">CodeLlama</span>
+                        <span class="model-type">AR Baseline</span>
+                    </div>
+                    <div class="model-item model-item-blue">
+                        <span class="model-name">CodeGemma</span>
+                        <span class="model-type">AR Baseline</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-card sidebar-icse" id="sidebar-icse">
+                <div class="tip-icon">🏆</div>
+                <h4>ICSE Publication Goal</h4>
+                <p>Outstanding results from both groups may be combined into a joint submission to <strong>ICSE
+                        2027</strong>. See the Research page for details on this opportunity.</p>
+                <a href="research.html#icse-goal" class="sidebar-icse-link">Learn more →</a>
+            </div>
+
+            <div class="sidebar-card sidebar-tip" id="sidebar-tip">
+                <div class="tip-icon">💡</div>
+                <h4>Getting Started</h4>
+                <p>Begin with the LLaDA-8B paper to understand your project before your first meeting.</p>
+            </div>
+        </aside>
+        </div>
         </div>
     </section>
 
