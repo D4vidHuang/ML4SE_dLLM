@@ -157,17 +157,8 @@
                     <div class="content-block">
                         <h2>Student Groups &amp; Research Questions</h2>
                         <p>The cohort is divided into two groups, each tackling a distinct angle of the
-                            dLLM-for-refactoring hypothesis. All five RQs in each group are equally important
-                            deliverables. The star rating indicates relative workload and implementation complexity.
-                            <strong>There will be no difference during the grading whether you choose a 2-star or
-                                3-star RQ. The only difference is what you can gain during this process.</strong>
-                        </p>
-                        <div class="rq-legend">
-                            <span class="rq-legend-item"><span class="rq-star core">★★★</span> Higher implementation
-                                complexity</span>
-                            <span class="rq-legend-item"><span class="rq-star two">★★</span> Moderate implementation
-                                complexity</span>
-                        </div>
+                            dLLM-for-refactoring hypothesis. All RQs in each group are equally important
+                            deliverables.</p>
 
                         <!-- ── GROUP A ── -->
                         <div class="student-group" id="group-a">
@@ -185,8 +176,6 @@
 
                             <div class="rq-list">
                                 <div class="rq-item" id="rq-a1">
-                                    <div class="rq-num">RQ A1</div>
-                                    <div class="rq-stars core">★★★</div>
                                     <div class="rq-body">
                                         <div class="rq-text">How robust are dLLMs compared to AR models when subjected
                                             to semantic-preserving prompt perturbations in code refactoring?</div>
@@ -196,8 +185,6 @@
                                     </div>
                                 </div>
                                 <div class="rq-item" id="rq-a2">
-                                    <div class="rq-num">RQ A2</div>
-                                    <div class="rq-stars core">★★★</div>
                                     <div class="rq-body">
                                         <div class="rq-text">To what extent do context ordering perturbations expose the
                                             structural differences between bidirectional dLLMs and unidirectional AR
@@ -209,38 +196,12 @@
                                     </div>
                                 </div>
                                 <div class="rq-item" id="rq-a3">
-                                    <div class="rq-num">RQ A3</div>
-                                    <div class="rq-stars core">★★★</div>
                                     <div class="rq-body">
                                         <div class="rq-text">What is the correlation between prompt robustness and
                                             refactoring correctness in dLLMs versus AR models?</div>
                                         <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Prove "stable and
                                             correct". A model that consistently produces the same wrong output offers no
                                             practical value.</div>
-                                    </div>
-                                </div>
-                                <div class="rq-item" id="rq-a4">
-                                    <div class="rq-num">RQ A4</div>
-                                    <div class="rq-stars two">★★</div>
-                                    <div class="rq-body">
-                                        <div class="rq-text">How does specification granularity affect generation
-                                            entropy and token distribution in dLLMs?</div>
-                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Produce rich
-                                            visualisations. Extract model generation confidence (entropy) under prompts
-                                            of varying granularity and generate token-probability heat maps that
-                                            visualise how dLLM attention shifts with instruction specificity.</div>
-                                    </div>
-                                </div>
-                                <div class="rq-item" id="rq-a5">
-                                    <div class="rq-num">RQ A5</div>
-                                    <div class="rq-stars two">★★</div>
-                                    <div class="rq-body">
-                                        <div class="rq-text">How do model scale and underlying architecture influence
-                                            the prompt sensitivity of dLLMs?</div>
-                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Demonstrate
-                                            generalisability. Introduce models of different sizes or families (e.g.,
-                                            LLaDA-8B vs. Dream-7B; multiple Qwen2.5-Coder scales) and show whether the
-                                            robustness findings are artefacts of a single model.</div>
                                     </div>
                                 </div>
                             </div>
@@ -251,82 +212,13 @@
                             <div class="group-header group-header-blue">
                                 <div class="group-badge group-badge-blue">Group B</div>
                                 <div class="group-title-area">
-                                    <h3>Overrefactoring — Can dLLM Masking Suppress Over-modification?</h3>
-                                    <p><em>Project Pitch:</em> Overrefactoring is a critical failure mode of LLMs in
-                                        software engineering, which can silently introduce ghost bugs. This project
-                                        investigates whether dLLMs' precise masking mechanism can constrain the
-                                        modification scope to targeted regions, acting as a surgical tool that
-                                        suppresses overrefactoring while preserving refactoring effectiveness.</p>
-                                </div>
-                            </div>
-                            <div class="rq-list">
-                                <div class="rq-item rq-item-blue" id="rq-b1">
-                                    <div class="rq-num rq-num-blue">RQ B1</div>
-                                    <div class="rq-stars core-blue">★★★</div>
-                                    <div class="rq-body">
-                                        <div class="rq-text">Do dLLMs inherently reduce the overrefactoring rate
-                                            compared to AR models under default settings?</div>
-                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Establish that the
-                                            phenomenon exists. Under different mask settings,
-                                            compare the rate at which dLLMs and AR models modify tokens outside the
-                                            target smell region (overrefactoring rate).</div>
-                                    </div>
-                                </div>
-                                <div class="rq-item rq-item-blue" id="rq-b2">
-                                    <div class="rq-num rq-num-blue">RQ B2</div>
-                                    <div class="rq-stars core-blue">★★★</div>
-                                    <div class="rq-body">
-                                        <div class="rq-text">How does the granularity of the masked region impact the
-                                            trade-off between overrefactoring suppression and refactoring success rate?
-                                        </div>
-                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Test different
-                                            levels of mask granularity, and plot the Pareto front curve to explore
-                                            whether tighter
-                                            constraints strip the model of the contextual information needed for correct
-                                            refactoring.</div>
-                                    </div>
-                                </div>
-                                <div class="rq-item rq-item-blue" id="rq-b3">
-                                    <div class="rq-num rq-num-blue">RQ B3</div>
-                                    <div class="rq-stars core-blue">★★★</div>
-                                    <div class="rq-body">
-                                        <div class="rq-text">To what extent does precise masking in dLLMs preserve the
-                                            functional integrity of non-target code regions?</div>
-                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Penetrate to code
-                                            semantics. Beyond counting token diffs, use various methods to
-                                            quantitatively measure how many control-flow or structural changes AR models
-                                            vs. different-granularity dLLMs introduce in untargeted code regions.</div>
-                                    </div>
-                                </div>
-                                <div class="rq-item rq-item-blue" id="rq-b4">
-                                    <div class="rq-num rq-num-blue">RQ B4</div>
-                                    <div class="rq-stars two-blue">★★</div>
-                                    <div class="rq-body">
-                                        <div class="rq-text">How does the effectiveness of masking granularity vary
-                                            across different categories of code smells?</div>
-                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Refine the
-                                            analysis dimension. Break down the dataset by smell type and compute metrics
-                                            per
-                                            category. </div>
-                                    </div>
-                                </div>
-                                <div class="rq-item rq-item-blue" id="rq-b5">
-                                    <div class="rq-num rq-num-blue">RQ B5</div>
-                                    <div class="rq-stars two-blue">★★</div>
-                                    <div class="rq-body">
-                                        <div class="rq-text">How does the size and structural complexity of the input
-                                            code context influence the overrefactoring propensity of dLLMs under
-                                            different mask granularities compared to AR models?
-                                        </div>
-                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span>Add a robustness
-                                            and scalability perspective grounded in SE metrics. Student will calculate
-                                            static code metrics (e.g., Lines of Code (LOC), Cyclomatic Complexity, AST
-                                            depth) for all samples. By bucketing these metrics (e.g., Short/Simple vs.
-                                            Long/Complex), they can produce scatter plots with regression lines or
-                                            grouped trend lines showing how the overrefactoring rate scales with code
-                                            difficulty.
-                                        </div>
-                                    </div>
+                                    <h3>Tool for refactoring mining, How early can we get it?</h3>
+                                    <p><em>Project Pitch:</em> Code refactoring is fundamentally based on technical
+                                        debt, which is hard for humans to resolve and sometimes unnecessary for people
+                                        to address manually. These days, we have powerful AI tools that can help us
+                                        shrink the time a lot for the refactoring process. Therefore, doing GitHub repo
+                                        mining for finding out the actual time saved and needed for Automatic Code
+                                        Refactoring with such tools will be important.</p>
                                 </div>
                             </div>
                         </div>
