@@ -167,41 +167,76 @@
                                 <div class="group-title-area">
                                     <h3>Prompt Sensitivity — Robustness of dLLMs vs. AR Models</h3>
                                     <p><em>Project Pitch:</em> Minor prompt variations often cause severe output
-                                        fluctuations in AR models during code refactoring tasks. This project
-                                        empirically tests whether dLLMs, which has bidirectional attention mechanism,
-                                        exhibit significantly superior robustness under semantically equivalent prompt
-                                        perturbations.</p>
+                                        fluctuations in AR models during code refactoring tasks. Inspired by the
+                                        Supervised
+                                        Fine-Tuning (SFT) paradigm of Large Language Diffusion Models (e.g., LLaDA, as
+                                        shown
+                                        in Fig 2b), where the entire prompt remains fully unmasked and visible while
+                                        only the
+                                        response is masked and iteratively refined, this project empirically tests
+                                        whether this
+                                        unique global conditioning mechanism makes dLLMs significantly more robust to
+                                        prompt
+                                        perturbations than strictly left-to-right AR models.</p>
                                 </div>
                             </div>
 
                             <div class="rq-list">
                                 <div class="rq-item" id="rq-a1">
                                     <div class="rq-body">
-                                        <div class="rq-text">How robust are dLLMs compared to AR models when subjected
-                                            to semantic-preserving prompt perturbations in code refactoring?</div>
-                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Establish the
-                                            baseline comparison. Using a systematic Perturbation Taxonomy, compute and
-                                            compare output consistency between dLLMs and AR models.</div>
+                                        <div class="rq-text">How accurately do dLLMs and AR models map localized prompt
+                                            instructions to specific code modifications, and how well do they isolate
+                                            changes when partial prompts are perturbed?</div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Evaluate the
+                                            structural alignment capabilities of both architectures. Since dLLMs process
+                                            the unmasked prompt bidirectionally without causal masks, this project aims
+                                            to test whether they can execute independent refactoring constraints (e.g.,
+                                            "rename X to Y" and "extract method Z") more precisely in their
+                                            corresponding output segments than AR models, and whether perturbing one
+                                            specific constraint causes cascading failures in unmodified regions.</div>
                                     </div>
                                 </div>
                                 <div class="rq-item" id="rq-a2">
                                     <div class="rq-body">
-                                        <div class="rq-text">To what extent do context ordering perturbations expose the
-                                            structural differences between bidirectional dLLMs and unidirectional AR
-                                            models?</div>
-                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span>Validate the
-                                            theoretical hypothesis. Target perturbations specifically, demonstrating
-                                            whether left-to-right AR generation is highly sensitive to position while
-                                            dLLMs leverage global context to resist such shifts. </div>
+                                        <div class="rq-text">To what extent does the spatial ordering of multi-intent
+                                            prompts affect the localized structural mapping capabilities of dLLMs
+                                            compared to unidirectional AR models?</div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Validate the
+                                            theoretical hypothesis regarding recency bias. Since AR models generate
+                                            left-to-right, they often overweight instructions placed at the end of a
+                                            prompt. This RQ targets whether dLLMs, utilizing unmasked global prompt
+                                            conditioning, yield order-invariant local code modifications regardless of
+                                            how independent instructions (e.g., A then B vs. B then A) are shuffled in
+                                            the prompt.</div>
                                     </div>
                                 </div>
                                 <div class="rq-item" id="rq-a3">
                                     <div class="rq-body">
-                                        <div class="rq-text">What is the correlation between prompt robustness and
-                                            refactoring correctness in dLLMs versus AR models?</div>
-                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Prove "stable and
-                                            correct". A model that consistently produces the same wrong output offers no
-                                            practical value.</div>
+                                        <div class="rq-text">How resilient is the localized prompt-to-code mapping in
+                                            dLLMs and AR models when semantic noise or irrelevant constraints are
+                                            injected into the prompt?</div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Test the limits of
+                                            attention dilution. Since a dLLM's mask predictor relies entirely on the
+                                            fully unmasked prompt to denoise the masked response simultaneously, assess
+                                            if injecting localized noise (e.g., irrelevant comments or conflicting
+                                            pseudo-constraints) disrupts its global attention, causing it to misapply or
+                                            forget valid localized refactoring tasks, compared to AR models filtering
+                                            noise left-to-right.</div>
+                                    </div>
+                                </div>
+                                <div class="rq-item" id="rq-a4">
+                                    <div class="rq-body">
+                                        <div class="rq-text">Does the structural isolation of local refactoring
+                                            constraints in dLLMs and AR models translate to global semantic correctness
+                                            and compilation success?</div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Connect structural
+                                            robustness to functional validity in SE. A model might successfully isolate
+                                            a local change textually (e.g., renaming a variable only inside one loop, as
+                                            tested in RQ1), but fail to resolve global semantic dependencies (e.g.,
+                                            failing to update the method signature, causing a compilation error).
+                                            Evaluate if the bidirectional diffusion objective maintains better Abstract
+                                            Syntax Tree (AST) integrity and compilation pass rates under local
+                                            perturbations than AR baselines.</div>
                                     </div>
                                 </div>
                             </div>
@@ -212,38 +247,62 @@
                             <div class="group-header group-header-blue">
                                 <div class="group-badge group-badge-blue">Group B</div>
                                 <div class="group-title-area">
-                                    <h3>Tool for refactoring mining, How early can we get it?</h3>
+                                    <h3>Tool for Refactoring Mining — The "Survival Time" of Technical Debt</h3>
                                     <p><em>Project Pitch:</em> Through repository mining, we aim to uncover the
                                         underlying reasons and triggers that prompt human developers to perform code
-                                        refactoring. The ultimate goal is to understand what causes a refactoring and
-                                        investigate how much earlier in the software development lifecycle it could have
-                                        actually been done. The focus here is on the data generation
-                                        procedure—identifying precisely when technical debt accumulates to a tipping
-                                        point—which will later serve as the foundation for powerful AI-driven automatic
-                                        refactoring tools.</p>
+                                        refactoring. Inspired by recent findings that bugs resembling AI-generated code
+                                        survive significantly longer in repositories (taking more commits to resolve),
+                                        this project investigates the "latency" or "survival time" of technical debt.
+                                        The ultimate goal is to trace back using version history (e.g., git blame) to
+                                        quantify precisely how much earlier a refactoring task could have been
+                                        performed, and whether code originating from "other developers" (a proxy for AI
+                                        assistants) disproportionately delays necessary structural improvements.</p>
                                 </div>
                             </div>
                             <div class="rq-list">
                                 <div class="rq-item rq-item-blue" id="rq-b1">
                                     <div class="rq-body">
                                         <div class="rq-text">What are the primary triggers and evolutionary patterns in
-                                            codebases that cause human developers to initiate a refactoring process?
+                                            codebases that finally force developers to initiate a refactoring process?
                                         </div>
                                         <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Mine commit
                                             histories to identify the specific codebase conditions (e.g., code smell
-                                            thresholds or structural complexity jumps) that historically lead to manual
-                                            refactoring.</div>
+                                            thresholds, complexity jumps, or file size limits) that historically break
+                                            the camel's back and lead to manual refactoring.</div>
                                     </div>
                                 </div>
                                 <div class="rq-item rq-item-blue" id="rq-b2">
                                     <div class="rq-body">
-                                        <div class="rq-text">Based on historical repository data, how much earlier could
-                                            a refactoring task have been performed before a human developer actually
-                                            addressed it?</div>
-                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> By tracing back
-                                            the history of refactored files, establish the timeline of technical debt
-                                            accumulation and quantify the delay between when a refactoring was
-                                            theoretically needed versus when it was executed.</div>
+                                        <div class="rq-text">How long is the "latency period" of technical debt,
+                                            measured in the number of commits, from introduction to refactoring?</div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Borrowing the
+                                            methodology of tracking "commits to fix", trace the history of refactored
+                                            files to establish the exact timeline of technical debt accumulation.
+                                            Quantify the delay (in days and commit counts) between when a code smell was
+                                            first introduced and when it was finally refactored.</div>
+                                    </div>
+                                </div>
+                                <div class="rq-item rq-item-blue" id="rq-b3">
+                                    <div class="rq-body">
+                                        <div class="rq-text">Does the authorship of suboptimal code (Self vs. Other/AI)
+                                            significantly extend its survival time before refactoring?</div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Test the
+                                            hypothesis derived from AI-assisted programming studies: since AI acts as an
+                                            "other developer" whose code is often poorly understood by the active user,
+                                            investigate whether code snippets introduced by different authors (or
+                                            identified as AI-like patterns) survive significantly more commits before
+                                            being refactored compared to self-authored code.</div>
+                                    </div>
+                                </div>
+                                <div class="rq-item rq-item-blue" id="rq-b4">
+                                    <div class="rq-body">
+                                        <div class="rq-text">Can we predict the "optimal intervention point" for
+                                            automatic refactoring tools based on historical latency data?</div>
+                                        <div class="rq-goal"><span class="rq-goal-label">Goal:</span> Use the data
+                                            generated in RQ1 and RQ2 to define a theoretical "intervention window."
+                                            Determine how much earlier an AI-driven refactoring tool should suggest
+                                            changes to prevent the exponential accumulation of technical debt,
+                                            minimizing the long commit delays observed in human-driven workflows.</div>
                                     </div>
                                 </div>
                             </div>
